@@ -5,6 +5,7 @@ slug: "diva-explaination-translation"
 cover:
   image: "01.jpg"
   alt: "影片翻譯：「PDA判定解説　判定の仕組みと台判別　【Project DIVA Arcade】"
+  linkUrl: "https://youtu.be/poOVra7V5jY"
 tags: ["初音未來", "Project DIVA", "名伶計畫", "作品集", "翻譯"]
 categories: ["初音未來", "軟核短文"]
 draft: false
@@ -36,8 +37,12 @@ draft: false
 有翻譯ㄛ！有翻譯！
 影片連結在[這裡](https://youtu.be/poOVra7V5jY)！
 
-CCT
-2026年05月13日
+
+
+**CCT**
+
+**2026年05月13日**
+
 
 ---
 

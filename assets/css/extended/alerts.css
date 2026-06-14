@@ -1,0 +1,123 @@
+/* ============================================================
+   GitHub-style Alert Callouts
+   支援：[!NOTE] [!TIP] [!IMPORTANT] [!WARNING] [!CAUTION]
+   ============================================================ */
+
+.gh-alert {
+  border-left: 4px solid;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background-color: transparent;
+}
+
+.gh-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.gh-alert-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.gh-alert-content p {
+  margin: 0.25rem 0;
+}
+
+/* NOTE — 藍色 */
+.gh-alert-note {
+  border-color: #1f6feb;
+  background-color: rgba(31, 111, 235, 0.08);
+}
+.gh-alert-note .gh-alert-title {
+  color: #58a6ff;
+}
+.gh-alert-note svg {
+  color: #58a6ff;
+  fill: #58a6ff;
+}
+
+/* TIP — 綠色 */
+.gh-alert-tip {
+  border-color: #3fb950;
+  background-color: rgba(63, 185, 80, 0.08);
+}
+.gh-alert-tip .gh-alert-title {
+  color: #3fb950;
+}
+.gh-alert-tip svg {
+  fill: #3fb950;
+}
+
+/* IMPORTANT — 紫色 */
+.gh-alert-important {
+  border-color: #8957e5;
+  background-color: rgba(137, 87, 229, 0.08);
+}
+.gh-alert-important .gh-alert-title {
+  color: #bc8cff;
+}
+.gh-alert-important svg {
+  fill: #bc8cff;
+}
+
+/* WARNING — 黃色 */
+.gh-alert-warning {
+  border-color: #d29922;
+  background-color: rgba(210, 153, 34, 0.08);
+}
+.gh-alert-warning .gh-alert-title {
+  color: #e3b341;
+}
+.gh-alert-warning svg {
+  fill: #e3b341;
+}
+
+/* CAUTION — 紅色 */
+.gh-alert-caution {
+  border-color: #f85149;
+  background-color: rgba(248, 81, 73, 0.08);
+}
+.gh-alert-caution .gh-alert-title {
+  color: #ff7b72;
+}
+.gh-alert-caution svg {
+  fill: #ff7b72;
+}
+
+/* 亮色主題調整 */
+@media (prefers-color-scheme: light) {
+  .gh-alert-note {
+    background-color: rgba(31, 111, 235, 0.06);
+  }
+  .gh-alert-note .gh-alert-title,
+  .gh-alert-note svg { color: #0969da; fill: #0969da; }
+
+  .gh-alert-tip {
+    background-color: rgba(31, 136, 61, 0.06);
+  }
+  .gh-alert-tip .gh-alert-title,
+  .gh-alert-tip svg { color: #1a7f37; fill: #1a7f37; }
+
+  .gh-alert-important {
+    background-color: rgba(130, 80, 223, 0.06);
+  }
+  .gh-alert-important .gh-alert-title,
+  .gh-alert-important svg { color: #8250df; fill: #8250df; }
+
+  .gh-alert-warning {
+    background-color: rgba(154, 103, 0, 0.06);
+  }
+  .gh-alert-warning .gh-alert-title,
+  .gh-alert-warning svg { color: #9a6700; fill: #9a6700; }
+
+  .gh-alert-caution {
+    background-color: rgba(207, 34, 46, 0.06);
+  }
+  .gh-alert-caution .gh-alert-title,
+  .gh-alert-caution svg { color: #cf222e; fill: #cf222e; }
+}
