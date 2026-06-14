@@ -7,7 +7,7 @@ cover:
   alt: "初音地名系列：日本北海道初音礦山之鍵盤探險"
 tags: ["廣義初音未來相關", "人文史地研究", "初音地名系列", "日本"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 > [!NOTE]

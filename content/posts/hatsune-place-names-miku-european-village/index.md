@@ -7,7 +7,7 @@ cover:
   alt: "初音地名系列：叫做Miku的小村莊，還有Miku love"
 tags: ["廣義初音未來相關", "人文史地研究", "初音地名系列", "歐洲"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 聖尼古拉節快樂！先別納悶為什麼是聖尼古拉節，後面會好好說明(#

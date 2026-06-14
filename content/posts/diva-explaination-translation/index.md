@@ -7,7 +7,7 @@ cover:
   alt: "影片翻譯：「PDA判定解説　判定の仕組みと台判別　【Project DIVA Arcade】"
 tags: ["初音未來", "Project DIVA", "名伶計畫", "作品集", "翻譯"]
 categories: ["初音未來", "軟核短文"]
-draft: true
+draft: false
 ---
 
 大家好，這裡是CCT。

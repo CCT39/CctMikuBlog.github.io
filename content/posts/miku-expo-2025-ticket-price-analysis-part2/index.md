@@ -7,7 +7,7 @@ cover:
   alt: "MIKU EXPO 2025 ASIA各舉辦地票價分析（下篇）"
 tags: ["初音未來", "經濟研究", "MIKU EXPO", "MIKU EXPO 2025 ASIA各舉辦地票價分析系列", "統計學應用", "亞洲"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 在上一篇文章《[MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）]({{< ref "posts/miku-expo-2025-ticket-price-analysis-part1" >}})》當中，我們針對單純從匯率來比較MIKU EXPO本年度亞洲巡迴所到訪的8個國家或地區的票價後，得出臺灣的VIP票價是最貴的這件事進行討論。首先，透過購買力平價轉換係數來消除各國的物價水準，並透過每月平均淨工資來將票價直接換算成各國公民的勞動成本：需要工作幾天才能買到票，來讓跨國的票價比較更加直觀。

@@ -7,7 +7,7 @@ cover:
   alt: "臺灣 Project DIVA Arcade 機台傾向分布圖"
 tags: ["初音未來", "Project DIVA", "名伶計畫", "田野調查", "作品集", "技術性研究", "統計學應用", "臺灣"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 大家好，這裡是CCT。

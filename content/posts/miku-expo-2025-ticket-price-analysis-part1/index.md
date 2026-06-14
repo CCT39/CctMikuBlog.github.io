@@ -7,7 +7,7 @@ cover:
   alt: "MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）"
 tags: ["初音未來", "經濟研究", "MIKU EXPO", "MIKU EXPO 2025 ASIA各舉辦地票價分析系列", "亞洲"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 大家好，這裡是CCT。

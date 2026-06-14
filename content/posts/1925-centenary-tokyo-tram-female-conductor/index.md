@@ -7,7 +7,7 @@ cover:
   alt: "《1925》背後的故事：東京市電聘用首位女性車掌，在本日迎來100週年"
 tags: ["初音未來", "Vocaloid曲", "人文史地研究", "1925系列", "日本"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 大家好，這裡是CCT。

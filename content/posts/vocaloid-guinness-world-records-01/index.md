@@ -7,7 +7,7 @@ cover:
   alt: "Vocaloid與金氏世界紀錄01：由無人機或多軸飛行器組成的最大的光源馬賽克影像"
 tags: ["初音未來", "Vocaloid曲", "一般介紹", "金氏世界紀錄系列", "世界"]
 categories: ["初音未來", "軟核短文"]
-draft: true
+draft: false
 ---
 
 **金氏世界紀錄**（Guinness World Records、健力士世界紀錄、吉尼斯世界紀錄）想必多數人已經是耳熟能詳。

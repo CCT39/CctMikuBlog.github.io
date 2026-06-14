@@ -7,7 +7,7 @@ cover:
   alt: "Vocaloid與金氏世界紀錄03：Cosplay中最受歡迎的角色"
 tags: ["初音未來", "一般介紹", "金氏世界紀錄系列", "世界"]
 categories: ["初音未來", "軟核短文"]
-draft: true
+draft: false
 ---
 
 如果說[上一篇]({{< ref "posts/vocaloid-guinness-world-records-02" >}})的「YouTube上觀看次數最多的晶片音樂創作者的原創歌曲」保持者是初音未來的歌曲以及它的創作者，那這一次的金氏世界紀錄（Guinness World Records）保持者可就是咪苦本咪了。讓我們先來看看官網的介紹：

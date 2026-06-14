@@ -7,7 +7,7 @@ cover:
   alt: "1925：這一年「並不是」日本第一位女性車掌出現的一年"
 tags: ["初音未來", "Vocaloid曲", "人文史地研究", "1925系列", "日本"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 大家好，這裡是潛水員CCT。

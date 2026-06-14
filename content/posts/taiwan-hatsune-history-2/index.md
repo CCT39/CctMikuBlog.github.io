@@ -7,7 +7,7 @@ cover:
   alt: "臺灣初音史Ⅱ：Dgiyaq Mkeibuh! 花蓮吉安「初音山」的前世今生"
 tags: ["廣義初音未來相關", "人文史地研究", "臺灣初音史系列", "初音地名系列", "臺灣"]
 categories: ["初音未來", "硬核長文"]
-draft: true
+draft: false
 ---
 
 大家好，這裡是CCT。
