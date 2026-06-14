@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MIKU EXPO on CCT的咪苦筆記</title>
+    <link>http://localhost:1313/CctMikuBlog.github.io/tags/miku-expo/</link>
+    <description>Recent content in MIKU EXPO on CCT的咪苦筆記</description>
+    <generator>Hugo</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 14 Jun 2026 22:51:07 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/CctMikuBlog.github.io/tags/miku-expo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MIKU EXPO 2025 ASIA各舉辦地票價分析（下篇）</title>
+      <link>http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/</link>
+      <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/</guid>
+      <description>&lt;p&gt;在上一篇文章《&lt;a href=&#34;http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part1/&#34;&gt;MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）&lt;/a&gt;》當中，我們針對單純從匯率來比較MIKU EXPO本年度亞洲巡迴所到訪的8個國家或地區的票價後，得出臺灣的VIP票價是最貴的這件事進行討論。首先，透過購買力平價轉換係數來消除各國的物價水準，並透過每月平均淨工資來將票價直接換算成各國公民的勞動成本：需要工作幾天才能買到票，來讓跨國的票價比較更加直觀。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）</title>
+      <link>http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part1/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part1/</guid>
+      <description>&lt;p&gt;大家好，這裡是CCT。&lt;/p&gt;
+&lt;p&gt;由於大多數的粉絲都來自臺灣、香港、馬來西亞、新加坡等地，都屬於今年初音未來亞洲巡迴演唱會開辦的國家或地區名單，相信大家都很期待這次的演唱會吧。近日，在消息陸續公布後，票價也成為諸多討論的焦點之一，主要著重於臺灣VIP的票價是否過高的問題。這也引發我的好奇：臺灣的票價到底是不是「最高」的？或者說，我們這邊說的「最高」具體應該要是指什麼？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

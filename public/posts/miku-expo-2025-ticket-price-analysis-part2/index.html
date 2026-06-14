@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="auto" data-theme="auto">
+
+<head><script src="/CctMikuBlog.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CctMikuBlog.github.io/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>MIKU EXPO 2025 ASIA各舉辦地票價分析（下篇） | CCT的咪苦筆記</title>
+<meta name="keywords" content="初音未來, 經濟研究, MIKU EXPO, MIKU EXPO 2025 ASIA各舉辦地票價分析系列, 統計學應用, 亞洲">
+<meta name="description" content="在上一篇文章《MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）》當中，我們針對單純從匯率來比較MIKU EXPO本年度亞洲巡迴所到訪的8個國家或地區的票價後，得出臺灣的VIP票價是最貴的這件事進行討論。首先，透過購買力平價轉換係數來消除各國的物價水準，並透過每月平均淨工資來將票價直接換算成各國公民的勞動成本：需要工作幾天才能買到票，來讓跨國的票價比較更加直觀。">
+<meta name="author" content="CCT">
+<link rel="canonical" href="http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/">
+<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/CctMikuBlog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/CctMikuBlog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/CctMikuBlog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/CctMikuBlog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/CctMikuBlog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh-tw" href="http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/CctMikuBlog.github.io/" accesskey="h" title="CCT的咪苦筆記 (Alt + H)">CCT的咪苦筆記</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/tags/" title="標籤">
+                    <span>標籤</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/categories/" title="分類">
+                    <span>分類</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/about/" title="關於我">
+                    <span>關於我</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      MIKU EXPO 2025 ASIA各舉辦地票價分析（下篇）
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta">
+
+<span title='2025-08-29 00:00:00 +0000 UTC'>August 29, 2025</span>&nbsp;·&nbsp;<span>CCT</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager" src="http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/539407940_1220353710128683_111733330653240274_n.jpg" alt="MIKU EXPO 2025 ASIA各舉辦地票價分析（下篇）">
+        
+</figure>
+  <div class="post-content md-content"><p>在上一篇文章《<a href="http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part1/">MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）</a>》當中，我們針對單純從匯率來比較MIKU EXPO本年度亞洲巡迴所到訪的8個國家或地區的票價後，得出臺灣的VIP票價是最貴的這件事進行討論。首先，透過購買力平價轉換係數來消除各國的物價水準，並透過每月平均淨工資來將票價直接換算成各國公民的勞動成本：需要工作幾天才能買到票，來讓跨國的票價比較更加直觀。</p>
+<p>然而，「每月『平均』淨工資」與中位數相比，由於會受極端值影響，其較不能反映各國勞工的真實收入分布；並且，本文發現《CEOWORLD》的來源不夠嚴謹，且與各國公布之數據有不小的出入。</p>
+<p>因此本文的主要目的便是透過直接引用各國的統計資料，直接取得或估算獲得各國的工資中位數，使得「工作幾天才能換到一張門票」的這件事更加貼近當地的多數公民，同時也使數據來源更加嚴謹客觀。</p>
+<p>本文將會先詳列《CEOWORLD》每月平均淨工資的問題點，接著引用各國的工資中位數，若未公布工資中位數，則將透過估算或間接取得。最後再以工資中位數取代《上篇》的平均工資，透過《上篇》的公式來計算出「購得門票所需工作日數」。同時，透過工資中位數亦可得出OECD定義下的低薪勞工購得門票所需工作日數。</p>
+<h1 id="摘要">摘要<a hidden class="anchor" aria-hidden="true" href="#摘要">#</a></h1>
+<p>作為針對《上篇》的批判和補充，本文捨棄了平均工資以及《CEOWORLD》參考來源，改以中位數工資來進行比較；缺失中位數工資官方公布資訊的國家，則改以統計學模型擬合估計，或是其他間接方式來取得。</p>
+<p>本文透過更加嚴謹並能較客觀反映真實體感的中位數，得出中位數工資以及OECD定義下低薪工資勞工的購票所需日數，發現整體趨勢和《上篇》高度類似：印尼仍然是最貴的、四小龍仍然是最便宜的；臺灣仍然是四小龍當中最貴的，但是仍較顯著低於印尼、菲律賓、泰國和馬來西亞。</p>
+<h1 id="研究方法">研究方法<a hidden class="anchor" aria-hidden="true" href="#研究方法">#</a></h1>
+<h2 id="整體方法論">整體方法論<a hidden class="anchor" aria-hidden="true" href="#整體方法論">#</a></h2>
+<p>方法論大致與《上篇》雷同，惟將「購票所需工作日數」之平均工資以中位數工資來替代，並且資料來源改為參考8個國家或地區各自的政府、中央銀行或統計機構等一手來源；各國政府的具體統計方式可能稍有不同（例如是否是經常性薪資、是否是淨工資等），本文將盡量統一標準為本國籍工商服務業正職員工之不含獎金、加班費及稅金之經常性薪資。</p>
+<h2 id="對中位數的處理">對中位數的處理<a hidden class="anchor" aria-hidden="true" href="#對中位數的處理">#</a></h2>
+<p>中位數部分，《上篇》提到有兩個國家沒有公布全國各職業之工資中位數：泰國和印尼，因此本文必須特別處理該兩國的中位數資訊。</p>
+<h3 id="印尼">印尼<a hidden class="anchor" aria-hidden="true" href="#印尼">#</a></h3>
+<p>在本文中，印尼的部分將改為參考該國其他政府統計局之資料來源：這個數字並沒有直接公布，而是潛藏在其刊物《Indikator Pekerjaan Layak di Indonesia 2024》當中，因為該處必須得出該國「低薪」（OECD定義為薪資中位數的三分之二）的薪資標準，而不得不引用薪資中位數。儘管該來源可能也屬於粗估的數值，但由於是直接出自政府刊物，因此本文認為可信度還是較高的。</p>
+<h3 id="泰國">泰國<a hidden class="anchor" aria-hidden="true" href="#泰國">#</a></h3>
+<p>至於泰國則將透過統計學模型擬合分布函數，以此估算中位數。具體方法如下：</p>
+<ol>
+<li>首先，調查泰國國家統計局刊物《รายงานสถิติรายปีประเทศไทย 2567》（《Statistical Yearbook Thailand 2024》）當中的提供的收入區間人數資料作為原始資料。截至2025年08月23日，本刊是該系列當中最新的一期。</li>
+<li>其次，單純透過收入區間進行線性插值法估計中位數雖然方便，但是不甚嚴謹（畢竟收入通常不是線性分布）。考慮到這點，我們將會假設泰國人的工資分布符合「對數常態分布」（Log-normal distribution）。為佐證該假設之正當性，我們參考Ikemoto及Limskul（1987）針對泰國收入不平等情況的研究，該研究將中低收入的80%人口比例以對數常態分布擬合，而高收入族群則以Pareto分布擬合。由於本文著重探討中位數（即第50%），並且根據前述泰國國家統計局之資料，中位數所落在的收入區間，完全不包含上位20%的人口；因此我們認為，本文有著充分的理由透過假設該國工資之分布型態為對數常態分布來得出中位數。此外，根據Gallegati及Mauro（2005）針對已開發國家（德國、英國、美國）的研究，工資分布符合對數常態分布的收入區間之人口比例更多達97–99%，僅有最上位1–3%不符合；因此可以認為這是較普遍存在的分布型態。</li>
+<li>接著，基於前述資料和假設，我們透過將泰國人的工資分布以最大概似估計（maximum likelihood estimation，MLE）來找出最符合該對數常態分布的累積分布函數（cumulative distribution function，CDF）之分布參數：$μ$和$σ$。具體演算法採下山單體法（Nelder-Mead method），先將概似函數取負值再以前述方法進行最小化。對數常態分布的CDF定義如下：</li>
+</ol>
+$$
+  F(x;\mu,\sigma) = \frac{1}{2}\left[ 1 + \operatorname{erf}\!\left( \frac{\ln(x) - \mu}{\sigma \sqrt{2}} \right) \right], \quad x > 0 
+$$<ol start="4">
+<li>最後，透過前面的方法找到的參數μ，便能計算出該對數常態分布函數的中位數 $= exp(μ)$ 。</li>
+</ol>
+<h2 id="所需工作日數">所需工作日數<a hidden class="anchor" aria-hidden="true" href="#所需工作日數">#</a></h2>
+<p>有了中位數，除可以代入《上篇》之公式得出中位數工資勞工所需工作日數以外，也可以順便以OECD的定義得出低薪勞工所需工作日數：僅需將中位數勞工之日數除以三分之二（$×1.5$）即可。</p>
+<p>至於泰國工資中位數的具體的演算方式：由於尋找最佳的μ和σ的過程十分繁瑣、計算量巨大，我們將不得不編寫程式來計算得出。考慮到前揭計算需求，本文將透過編寫Python程式進行計算，因為其相關演算法函式庫資源充足，可以直接引用第三方函式庫來計算，且能夠額外繪製圖表。這裡我們提供<a href="https://raw.githubusercontent.com/CCT39/MedianSalaryOfThailand/refs/heads/main/main.py">完整程式的GitHub連結供參考</a>。</p>
+<p>此外，在《上篇》我們發現物價和工資修正後的票價可以大致分成兩大組，與這些國家本身的經濟狀況高度相關。在本篇為了方便，除會將新加坡、香港、韓國和臺灣繼續合稱「四小龍」外，也會開始以「四小虎」合稱泰國、馬來西亞、菲律賓和印尼。</p>
+<h1 id="ceoworld的平均工資出了什麼問題">《CEOWORLD》的平均工資出了什麼問題？<a hidden class="anchor" aria-hidden="true" href="#ceoworld的平均工資出了什麼問題">#</a></h1>
+<p>《CEOWORLD》儘管是世界知名的商業雜誌，然而其並非學術期刊，嚴謹性有待商榷；因此我們認為，若直接引用其提供之數據可能存在風險。讓我們開門見山，從最大的「與各國公布之資料差距過大」的面向來探討；我們先回顧一下《CEOWORLD》當中所列出的各國勞工每月平均淨工資的數據，本章節將以泰國及印尼為例來探討：</p>
+<ul>
+<li>泰國：615 USD （~19,991.81 THB）/月</li>
+<li>印尼：451 USD （~7,447,363.00 IDR）/月</li>
+</ul>
+<h2 id="泰國-1">泰國<a hidden class="anchor" aria-hidden="true" href="#泰國-1">#</a></h2>
+<p>首先來討論泰國。根據泰國銀行（Bank of Thailand，即泰國的中央銀行）所公布的「依職業分類的平均薪資」（ค่าจ้างแรงงานเฉลี่ย จำแนกตามอาชีพ）公開資料中可以發現，其包羅了各大職業類別的綜合平均工資為：</p>
+<blockquote>
+<p>15,737.61 THB/月</p>
+</blockquote>
+<p><em>（資料年度：佛曆2567年Q4，即格里曆2024年Q4）</em></p>
+<p>這個數字僅是《CEOWORLD》所公布平均工資的不到80%；即使《CEOWORLD》所公布的資料時間是昨天統計的，那麼泰國的平均工資上漲20%也只用了短短半年多，本文認為這是不太可能的。也許「615 USD」是僅考慮曼谷都會區，或是特定職業別的平均。</p>
+<h2 id="印尼-1">印尼<a hidden class="anchor" aria-hidden="true" href="#印尼-1">#</a></h2>
+<p>接著來看印尼，根據印尼中央統計局（Badan Pusat Statistik，BPS）所公布的「2025年平均薪資（印尼盾）」（Rata-Rata Upah/Gaji (Rupiah), 2025）公開資料中可以發現，同樣包羅各大職業別，其總平均工資為：</p>
+<blockquote>
+<p>3,094,818 IDR/月</p>
+</blockquote>
+<p><em>（資料年度：2024年02月及08月）</em></p>
+<p>這個數字差異更大，僅是《CEOWORLD》所公布平均工資的不到一半，著實讓人好奇該雜誌的數字究竟是如何得出的。</p>
+<p>除了前面提到的與各國政府之統計資料差異過大這個主要問題點之外，該期刊是二手資訊、已將單位全都換成美元、未提供參考資料、無法向上追溯來源，這些問題促使我們必須淘汰該來源，改使用更加嚴謹的來源以及指標。</p>
+<h1 id="各國工資中位數">各國工資中位數<a hidden class="anchor" aria-hidden="true" href="#各國工資中位數">#</a></h1>
+<p>根據各國的政府、中央銀行或統計機構，可以得出工資中位數。在8個國家或地區中，泰國和印尼並未直接公布，因此以下將先估算出兩國之中位數。</p>
+<h2 id="印尼-2">印尼<a hidden class="anchor" aria-hidden="true" href="#印尼-2">#</a></h2>
+<p>首先是印尼，印尼的統計機構雖然沒有直接公布工資中位數，但BPS所出版的刊物《Indikator Pekerjaan Layak di Indonesia 2024》當中，有著這麼一段描述：</p>
+<blockquote>
+<p>Dari sisi median upah, terdapat kenaikan Rp100.000 dari Rp2.500.000 (tahun 2023) menjadi Rp2.600.000 (tahun 2024), sehingga ambang batas 2/3 median upah naik dari Rp1.666.667 menjadi Rp1.733.333.</p>
+</blockquote>
+<p><em>「從工資中位數來看，從2,500,000盾（2023 年）增加了100,000盾，成為2,600,000盾（2024年），因此三分之二工資中位數的門檻，從1,666,667盾上升到1,733,333盾。」（機器翻譯並經校對）</em></p>
+<p>受撰稿者知識限制，此處印尼文僅可依靠機器翻譯。考慮到馬來文及印尼文雖有顯著的詞彙差異，但兩門語言可大致互通，因此在這裡我們邀請馬來西亞籍的林○○協助校對，確認無重大謬誤，並最終得出上述譯文。</p>
+<p>更進一步從原文的一些關鍵的單字如“median”（中位數，與英文拼寫相同）以及數字來看，「2024年的工資中位數是260萬印尼盾」的資訊應該是八九不離十、應無太大誤解了。</p>
+<h2 id="泰國-2">泰國<a hidden class="anchor" aria-hidden="true" href="#泰國-2">#</a></h2>
+<p>接著是泰國，我們遵循研究方法章節進行函數擬合並找出中位數，並將給出程式碼供參考。根據泰國國家統計局刊物《รายงานสถิติรายปีประเทศไทย 2567》，2023年第3季的收入區間及人口數分布如下：</p>
+<ul>
+<li>≤ 2,500 THB：95,700 人</li>
+<li>2,501–5,500 THB：674,200 人</li>
+<li>5,501–10,000 THB：6,230,400 人</li>
+<li>10,001–15,000 THB：6,016,100 人</li>
+<li>≥ 15,001 THB：5,657,700 人</li>
+</ul>
+<p>我們針對此分布以Python程式進行演算，並由較熟諳Python之黃○○及馮○○兩位人士協助校對程式。最終，所搜尋出的對數常態分布最佳擬合結果之參數分別為：</p>
+$$
+μ ≈ 9.3721
+$$$$
+σ ≈ 0.4739
+$$<blockquote>
+<p>[!NOTE]</p>
+<p>為兼顧精度及計算時間，此處將最小刻度取至0.0001</p>
+</blockquote>
+<p>由此可得出中位數：</p>
+$$
+exp(μ) ≈ 11,755.78 THB/月
+$$<p>
+本文將取至整數<strong>11,756 THB/月</strong>。</p>
+<h2 id="小結">小結<a hidden class="anchor" aria-hidden="true" href="#小結">#</a></h2>
+<p>綜上所述，我們可以得出8個國家或地區的工資中位數。詳列如下：</p>
+<ul>
+<li>泰國　　：11,756 THB/月（2023）<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+<li>香港　　：20,500 HKD/月（2024）</li>
+<li>印尼　　：2,600,000 IDR/月（2024）<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+<li>菲律賓　：14,588 PHP/月（2022）</li>
+<li>新加坡　：5,500 SGD/月（2024）</li>
+<li>馬來西亞：3,000 MYR/月（2025）</li>
+<li>韓國　　：2,780,000 KRW/月（2023）</li>
+<li>臺灣　　：38,689 TWD/月 （2024）<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+</ul>
+<h1 id="中位數及低薪勞工所需工作日數以vip為例">中位數及低薪勞工所需工作日數：以VIP為例<a hidden class="anchor" aria-hidden="true" href="#中位數及低薪勞工所需工作日數以vip為例">#</a></h1>
+<p>取得各地的工資中位數之後，便可以計算各國家或地區領著工資中位數的正職勞工，購入VIP門票之所需工作日數如下：</p>
+<ul>
+<li>泰國　　：~20.19 天</li>
+<li>香港　　：~2.21 天</li>
+<li>印尼　　：~46.83 天</li>
+<li>菲律賓　：~22.70 天</li>
+<li>新加坡　：~1.65 天</li>
+<li>馬來西亞：~11.04 天</li>
+<li>韓國　　：~2.41 天</li>
+<li>臺灣　　：~6.45 天</li>
+</ul>
+<p>將上述日數除以三分之二，可得OECD定義之低薪勞工購入VIP門票所需工作日數：</p>
+<ul>
+<li>泰國　　：~30.29 天</li>
+<li>香港　　：~3.31 天</li>
+<li>印尼　　：~70.24 天</li>
+<li>菲律賓　：~34.05 天</li>
+<li>新加坡　：~2.47 天</li>
+<li>馬來西亞：~16.56 天</li>
+<li>韓國　　：~3.61 天</li>
+<li>臺灣　　：~9.68 天</li>
+</ul>
+<p>可以發現，無論是從中位數或者低薪者的所需工作日數來看，趨勢都與《上篇》大同小異：印尼仍然是最貴的，而四小龍則都偏低。只是可能是因為開發中國家整體貧富差距較大的關係，各國之間的差異，尤其是四小龍和四小虎之間的差異變得更加顯著。不過個人覺得，工資中位數的分析結果比較像是高成本組（印尼、菲律賓、泰國）、中成本組（馬來西亞、臺灣）和低成本組（韓國、香港、新加坡）。</p>
+<p>值得注意的是，印尼領著中位數薪資的勞工，購買VIP門票的成本和平均工資相比大幅增加，必須工作一個半月才可以換得。這次的8個國家或地區當中，印尼的面積和人口都是遠大於其他國家的，加上又是開發中國家，也許是因為發展極度不均才導致平均和中位數的極大落差。而馬來西亞則可能因其屬於四小虎之中發展最好的國家（若參考人類發展指數），無論是平均與中位數的差異，或是所需購票日數，也都遠較其他三國還少。</p>
+<p>至於臺灣，雖然仍是屬於四小龍當中最貴，而且還是顯著地貴；但即使是低薪者（這個薪水低於基本工資），所需工作天數仍是10天之內，仍較四小虎的中位數還少。這邊想特別提的是，勞動部定義的低薪標準為31,000 TWD，其所參考的中位數並非本文引用的「經常性薪資中位數」，而可能是包含獎金的；不過低薪標準的這個「中位數」應不應該包含獎金，目前似乎也未有共識。這個數值本身雖然會有差異，但是當跨國比較時，這個差異並不太顯著，因此本文選擇沿用這個結果；不過得出各國更嚴謹、更統一標準的中位數再來計算，確實是很值得繼續深入研究的方向。</p>
+<h1 id="結論">結論<a hidden class="anchor" aria-hidden="true" href="#結論">#</a></h1>
+<p>本文考慮到《上篇》之工資資料存在漏洞，因此改以各國政府所公布之工資中位數進行計算，而未直接公布的國家，則以該國提供之其他與工資分布相關的資訊，透過統計學模型擬合或是其他間接來源以估計其工資中位數。得出中位數後，便能夠得出領著該國工資中位數（或低薪標準之工資）之正職勞工，購買演唱會門票所需的工作日數指標。</p>
+<p>本文發現，參考了更嚴謹、更能反映多數勞工的工資指標後，跨國比較的整體趨勢仍和《上篇》高度雷同：購入VIP門票所需付出的勞動成本，四小虎仍較四小龍高上許多，只是差異更為顯著；臺灣所需付出的成本仍是四小龍最高，也仍然較四小虎低了不少。此外，無論是透過平均工資還是中位數工資，得出的各國票價高低排名都與從PPP得出的物價分析排名較接近，而與國際匯率相差較大，這可以從側面支持PPP在此處比較是略優於國際匯率的。</p>
+<p>即使是採用更嚴謹的工資指標，本文認為仍存在漏洞或是其他值得深入釐清的部分。建議後續之探索可考慮以下面向：</p>
+<ol>
+<li>前揭中位數可能非淨收入，因此可能還需考慮各國的稅收和保險；</li>
+<li>由於開發中國家之城鄉差距及職業差距往往更大，即使是中位數可能仍不能反映出太多事實，因此可能須考慮其城市及城市以外的薪資差異，或是著重在以各國首都勞工為例進行分析；</li>
+<li>各國政府所公布的中位數標準或具體統計方法可能不太一致（例如是否計入非經常性獎金），因此標準一致也成為接下來的改善方向；</li>
+<li>本文僅考慮工資本身，還沒有考慮各國工時，也就是實際工作多少時間才換來這樣的薪水；</li>
+<li>目前都只考慮本國正職勞工，而還沒有考慮外籍移工、部分工時、或是大部分學生這類的非勞動力群體；</li>
+<li>可考慮購票時不算在門票面額的額外成本，例如購票手續費、信用卡手續費、或是各國課徵的娛樂稅或類似稅種等；</li>
+<li>可考慮各地場館的硬體設施、座位、主協辦單位等差異，並需要一個能夠橫向比較的方法；</li>
+<li>VIP套組之內容若有差異，可能需要考慮其差異，並可能需要定義客觀的比較方法。</li>
+</ol>
+<h1 id="針對粉絲回饋之回應">針對粉絲回饋之回應<a hidden class="anchor" aria-hidden="true" href="#針對粉絲回饋之回應">#</a></h1>
+<p>在《上篇》之中收到了不少粉絲的回饋，這邊也特別摘選出兩項質疑並回覆：</p>
+<h2 id="是否先射箭後畫靶">是否先射箭後畫靶？<a hidden class="anchor" aria-hidden="true" href="#是否先射箭後畫靶">#</a></h2>
+<blockquote>
+<p>匯率已經很直觀，何苦要換成購買力平價（PPP）？是否是先射箭後畫靶，只選擇對自己有利的結論？</p>
+</blockquote>
+<p>本文以PPP來取代國際匯率，最重要的目的自然是比較各國各自的VIP門票價格對該國公民來說，入手的成本多大；如果我們打算討論的是同一位臺灣人（或者同一個特定國家的人）去購買8個國家的門票，那確實不需要引入PPP，這時就使用國際匯率就好了，因為這個人平常感受著臺灣的物價、領著臺灣的工資，才會需要用匯率換成各種不同貨幣去他國購買門票。但是這種人畢竟是少數，會在某個國家購買門票的人，大多都還是生活在該國的人吧？也就是說這些門票在各國是屬於各自國內的非貿易性商品。正是因為考慮到這點，我們才會在《上篇》的「研究範圍」章節，就先假設購票者的身分都是各國的公民，去購買各自國家的門票。如果今天探討的是同一國的公民去購買8地的門票（這樣就會使用國際匯率），實際上就是另一個問題，並非在我們早已確立的討論範圍之內。</p>
+<p>更進一步回應PPP在這裡的合理性、正當性和必要性：</p>
+<ol>
+<li>合理性：目前看到許多PPP的用途似乎都是用來衡量GDP，那麼有沒有像本文《上篇》一樣用來衡量個別商品的先例呢？D. Moye-Holz &amp; S. Vogler （2022）就是一個經典的案例：該研究先將5個拉丁美洲國家和11個歐洲國家的貨幣，都透過PPP轉換成同一貨幣（該文是寫美元購買力平價，US dollar purchasing power parities，其實就是《上篇》說的國際元的概念：1國際元在該國的購買力相當於1美元在美國的購買力）之後，用來衡量19種抗癌藥物在這些國家的價格。這個研究先例其實就是本文《上篇》的擴大版：從演唱會門票變成各種抗癌藥物、從8個國家變成16個國家而已。這個先例支持了本文使用PPP的合理性。</li>
+<li>正當性：就像上段說的一樣，這張門票在各國是屬於各自國內的非貿易性商品，正是有了這個前提假設，我們才遵照IMF的期刊《F&amp;D》專文〈Purchasing Power Parity: Weights Matter〉之建議，在各國的非貿易性商品之間的跨國比較中，選擇了PPP作為參考指標。這支持了本文使用PPP的正當性。</li>
+<li>必要性：國際匯率雖然直觀又方便，但是就像R. Summers &amp; A. Heston （1991）提到的一樣，很早人們就已經認識到，國際匯率在這裡（該段的前後文是在分析GDP；至於能不能分析個別商品，在前面合理性的段落已經給出先例）不是一個令人滿意的指標，因此才不得不以PPP來衡量；匯率的這個缺陷也是當初世界銀行主導執行International Comparison Program （ICP，國際比較計畫）的重要動機。這支持了本文使用PPP的必要性。</li>
+</ol>
+<p>其實著名的大麥克指數也是基於此種方式得出，只是這回我們用來衡量物價的商品不只有大麥克，而是一籃子商品和服務綜合得出的PPP。說真的，用國際匯率比較各國大麥克價格就很直觀了，何苦提出一個大麥克指數？其實原因類似：在臺灣購買大麥克的人主要不是各國的銀行家，而是生活在這裡、在這裡工作、消費、繳稅和付保險費的公民。PPP自然有缺點，但綜上所述，我們在這裡不得不引入PPP來比較。</p>
+<p><em>（當然如果能接受犧牲一些嚴謹性，用大麥克指數而不是PPP來比較票價也是可啦；這點我們確實失算了，選了一條很無趣的路。）</em></p>
+<h2 id="是否能真實反映體感">是否能真實反映體感？<a hidden class="anchor" aria-hidden="true" href="#是否能真實反映體感">#</a></h2>
+<blockquote>
+<p>和各國比較意義不大，這樣比能真實反映體感嗎？</p>
+</blockquote>
+<p>老實講，對小編本人來說這個票價也是貴得要命。不過本文撰寫的初衷，除了滿足個人的好奇心以外，也是為了呼應近期圈內針對各國票價的諸多討論，多是透過匯率來跨國比較這點，是否足夠嚴謹這件事，也因此本文開宗明義就是將範圍限縮在各國票價比較。若要真實反映體感，以臺灣為例，可以考慮的研究方向也不少：比如MIKU EXPO在臺灣已經舉辦三次（包含即將在今年舉辦的這次，即2016、2019和2025），可以透過直接比較三次演唱會的票價，並且透過消費者物價指數（CPI）來修正物價差異後得到初步的結果；當然可想而知，這樣分析之後大概會得到2025年最貴的結論，但是首先樣本數只有三次可能有點不足，其次是因為存在場館或硬體差異（畢竟今年是初登小巨蛋）等等；因此也可以針對這些主題深入分析，或是與其他同樣舉辦在小巨蛋的演唱會進行橫向比較。</p>
+<p>總之，這實際上也是另一個議題，我們可以期待長江後浪有志之士來繼續補強這部分的空白。</p>
+<h1 id="後記">後記<a hidden class="anchor" aria-hidden="true" href="#後記">#</a></h1>
+<p>最後，老實講之所以會有下篇最大的原因，是因為小編本人其實也是低薪仔，上篇算出的4.43天實在有點過譽，我還得工作更多天才能近看咪苦。正因如此，用盡一切手段都要把中位數算出來，順便得出OECD定義的低薪需要工作幾天；然後看向自己的所需工作日數，心裡才會平衡一點僅此而已。雖然最後我沒買到VIP，笑死(#</p>
+<p>不過算完後只想跟四小虎尤其是印尼的粉絲致敬。
+respect.</p>
+<h1 id="參考資料">參考資料<a hidden class="anchor" aria-hidden="true" href="#參考資料">#</a></h1>
+<h2 id="平均或中位數工資">平均或中位數工資<a hidden class="anchor" aria-hidden="true" href="#平均或中位數工資">#</a></h2>
+<ul>
+<li>泰國平均工資：泰國銀行〈EC_RL_018 ค่าจ้างแรงงานเฉลี่ย จำแนกตามอาชีพ〉 <a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=667&amp;language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=667&amp;language=TH</a></li>
+<li>印尼平均工資：印尼中央統計局〈Rata-Rata Upah/Gaji (Rupiah), 2025〉 <a href="https://www.bps.go.id/id/statistics-table/2/MTUyMSMy/average-of-net-wage-">https://www.bps.go.id/id/statistics-table/2/MTUyMSMy/average-of-net-wage-</a></li>
+<li>韓國中位數工資：韓國統計廳〈Income of Wage Workers in 2023〉 <a href="https://kostat.go.kr/board.es?mid=a20105070000&amp;bid=11786&amp;act=view&amp;list_no=435998">https://kostat.go.kr/board.es?mid=a20105070000&amp;bid=11786&amp;act=view&amp;list_no=435998</a></li>
+<li>香港中位數工資：香港特別行政區政府統計處〈表220-23011：按受聘性質及性別劃分的每月工資水平及分布〉 <a href="https://www.censtatd.gov.hk/tc/web_table.html?id=220-23011">https://www.censtatd.gov.hk/tc/web_table.html?id=220-23011</a></li>
+<li>新加坡中位數工資：新加坡人力部研究及統計處〈Summary Table: Income〉 <a href="https://stats.mom.gov.sg/Pages/Income-Summary-Table.aspx">https://stats.mom.gov.sg/Pages/Income-Summary-Table.aspx</a></li>
+<li>馬來西亞中位數工資：馬來西亞勞工統計局〈Formal Sector Wages〉<a href="https://open.dosm.gov.my/dashboard/formal-sector-wages">https://open.dosm.gov.my/dashboard/formal-sector-wages</a></li>
+<li>泰國工資分布：สำนักงานสถิติแห่งชาติ. <em>รายงานสถิติรายปีประเทศไทย 2567.</em>（National Statistical Office of Thailand (2025). <em>Statistical Yearbook Thailand 2024.</em>） <a href="https://www.nso.go.th/public/e-book/Statistical-Yearbook/SYB-2024_webPage/Page_SYB_TH.html">https://www.nso.go.th/public/e-book/Statistical-Yearbook/SYB-2024_webPage/Page_SYB_TH.html</a></li>
+<li>菲律賓中位數工資：菲律賓統計局〈Highlights of the 2022 Occupational Wages Survey (OWS)〉 <a href="https://psa.gov.ph/content/highlights-2022-occupational-wages-survey-ows">https://psa.gov.ph/content/highlights-2022-occupational-wages-survey-ows</a></li>
+<li>臺灣中位數工資：中華民國行政院主計總處〈113年全年受僱員工人數平均為845萬7千人，全年每人每月總薪資平均為60,984元〉 <a href="https://www.dgbas.gov.tw/News_Content.aspx?n=3602&amp;s=234606">https://www.dgbas.gov.tw/News_Content.aspx?n=3602&amp;s=234606</a></li>
+<li>印尼工資描述：Badan Pusat Statistik RI (2025). <em>Indikator Pekerjaan Layak di Indonesia 2024.</em> <a href="https://www.bps.go.id/id/publication/2025/04/28/1ecc9dec1ef7a591babf5962/indikator-pekerjaan-layak-di-indonesia-2024.html">https://www.bps.go.id/id/publication/2025/04/28/1ecc9dec1ef7a591babf5962/indikator-pekerjaan-layak-di-indonesia-2024.html</a></li>
+</ul>
+<h2 id="前言參考來源">前言參考來源<a hidden class="anchor" aria-hidden="true" href="#前言參考來源">#</a></h2>
+<ul>
+<li>Ikemoto, Y., &amp; Limskul, K. (1987). <em>Income Inequality and Regional Disparity 1962–81.</em> The developing economies, 25, 3. <a href="https://www.ide.go.jp/library/English/Publish/Periodicals/De/pdf/87_03_04.pdf">https://www.ide.go.jp/library/English/Publish/Periodicals/De/pdf/87_03_04.pdf</a></li>
+<li>Clementi, F., Gallegati, M. (2005). <em>Pareto’s Law of Income Distribution: Evidence for Germany, the United Kingdom, and the United States.</em> In: Chatterjee, A., Yarlagadda, S., Chakrabarti, B.K. (eds) Econophysics of Wealth Distributions. New Economic Windows. Springer, Milano. <a href="https://doi.org/10.1007/88-470-0389-X_1">https://doi.org/10.1007/88-470-0389-X_1</a></li>
+</ul>
+<h2 id="後記參考來源">後記參考來源<a hidden class="anchor" aria-hidden="true" href="#後記參考來源">#</a></h2>
+<ul>
+<li>Moye-Holz, D., &amp; Vogler, S. (2022). <em>Comparison of Prices and Affordability of Cancer Medicines in 16 Countries in Europe and Latin America.</em> Applied health economics and health policy, 20(1), pp. 67–77. <a href="https://doi.org/10.1007/s40258-021-00670-4">https://doi.org/10.1007/s40258-021-00670-4</a></li>
+<li>International Monetary Fund. <em>Purchasing Power Parity: Weights Matter.</em> <a href="https://www.imf.org/external/pubs/ft/fandd/basics/44-purchasing-power-parity.htm">https://www.imf.org/external/pubs/ft/fandd/basics/44-purchasing-power-parity.htm</a></li>
+<li>Summers, R., &amp; Heston A. (1991). <em>The Penn World Table (Mark 5): An Expanded Set of International Comparisons, 1950–1988.</em> The Quarterly Journal of Economics, Volume 106, Issue 2, May 1991, pp. 327–368. <a href="https://doi.org/10.2307/2937941">https://doi.org/10.2307/2937941</a></li>
+</ul>
+<h1 id="special-thanks-特別感謝">Special Thanks 特別感謝<a hidden class="anchor" aria-hidden="true" href="#special-thanks-特別感謝">#</a></h1>
+<p>本文的一些部份，撰稿者並不諳技術細節，是與生成式AI反覆對話而得出的；考慮到AI可能給出錯誤資訊，本文也邀請專業人士協助進行校對，以確保內容之準確性，特此銘謝。以下是特別感謝名單：（敬稱略、無任何排序）</p>
+<ul>
+<li>林○○ （馬來西亞麻坡出身現職中等教育業）：協助校對內文引用之印尼文文本及中文翻譯</li>
+<li>黃○○ （國立中央大學天文研究所在讀博士生）：協助校對Python程式及演算法</li>
+<li>馮○○ （國立成功大學認知科學研究所在讀博士生）：協助校對Python程式及演算法</li>
+</ul>
+<p><strong>CCT</strong></p>
+<p><strong>2025年08月29日</strong></p>
+<hr>
+<blockquote>
+<p><strong>原文出處</strong></p>
+<p>本文最初發布於 <strong>2025-08-29</strong>，
+原文連結如下，本站版本僅針對排版進行改善及更正錯別字，未改動內文：</p>
+<ul>
+<li>Facebook 未來群像：https://www.facebook.com/FutureImages.TW/posts/pfbid02m6gbzzZtdAjFYZ9VqRgk7U2wUg8k84jkiCfgJ1XHDQ4jjKbVCXLDLZNvaeTMWVzFl</li>
+<li>巴哈姆特：https://home.gamer.com.tw/artwork.php?sn=6202139</li>
+</ul>
+</blockquote>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>泰國的數據來自前述方法之推估值，並非官方所直接公布&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>印尼的數據並非直接公布，而是來自其他政府刊物內文中的描述&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>臺灣的數據參考113年全年工業及服務業本國籍全時受僱員工經常性薪資中位數，不計入年終獎金，以此與大部分國家標準一致&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E5%88%9D%E9%9F%B3%E6%9C%AA%E4%BE%86/">初音未來</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%B6%93%E6%BF%9F%E7%A0%94%E7%A9%B6/">經濟研究</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/miku-expo/">MIKU EXPO</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/miku-expo-2025-asia%E5%90%84%E8%88%89%E8%BE%A6%E5%9C%B0%E7%A5%A8%E5%83%B9%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97/">MIKU EXPO 2025 ASIA各舉辦地票價分析系列</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%B5%B1%E8%A8%88%E5%AD%B8%E6%87%89%E7%94%A8/">統計學應用</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E4%BA%9E%E6%B4%B2/">亞洲</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/CctMikuBlog.github.io/">CCT的咪苦筆記</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

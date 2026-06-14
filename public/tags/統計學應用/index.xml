@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>統計學應用 on CCT的咪苦筆記</title>
+    <link>http://localhost:1313/CctMikuBlog.github.io/tags/%E7%B5%B1%E8%A8%88%E5%AD%B8%E6%87%89%E7%94%A8/</link>
+    <description>Recent content in 統計學應用 on CCT的咪苦筆記</description>
+    <generator>Hugo</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 14 Jun 2026 22:51:07 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%B5%B1%E8%A8%88%E5%AD%B8%E6%87%89%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>臺灣 Project DIVA Arcade 機台傾向分布圖</title>
+      <link>http://localhost:1313/CctMikuBlog.github.io/posts/taiwan-project-diva-arcade-distribution/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CctMikuBlog.github.io/posts/taiwan-project-diva-arcade-distribution/</guid>
+      <description>&lt;p&gt;大家好，這裡是CCT。&lt;/p&gt;
+&lt;p&gt;「初音未來 Project DIVA Arcade Future Tone」（下稱DIVA AC或DIVA）是一款音樂遊戲街機，從2010年中開始營業，2011年的01月底左右引進臺灣，至今已經將近15個年頭；而我個人則是2013年01月入坑至今的玩家。儘管全臺乃至日本的據點和玩家都已經所剩無幾，不過活躍的社群仍然存在。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MIKU EXPO 2025 ASIA各舉辦地票價分析（下篇）</title>
+      <link>http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/</link>
+      <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part2/</guid>
+      <description>&lt;p&gt;在上一篇文章《&lt;a href=&#34;http://localhost:1313/CctMikuBlog.github.io/posts/miku-expo-2025-ticket-price-analysis-part1/&#34;&gt;MIKU EXPO 2025 ASIA各舉辦地票價分析（上篇）&lt;/a&gt;》當中，我們針對單純從匯率來比較MIKU EXPO本年度亞洲巡迴所到訪的8個國家或地區的票價後，得出臺灣的VIP票價是最貴的這件事進行討論。首先，透過購買力平價轉換係數來消除各國的物價水準，並透過每月平均淨工資來將票價直接換算成各國公民的勞動成本：需要工作幾天才能買到票，來讓跨國的票價比較更加直觀。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>以初音未來為主角的電影《劇場版世界計畫》4DX・MX4D臺灣上映首週末票房組成之推估、研究及分析</title>
+      <link>http://localhost:1313/CctMikuBlog.github.io/posts/project-sekai-movie-4d-box-office-analysis/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CctMikuBlog.github.io/posts/project-sekai-movie-4d-box-office-analysis/</guid>
+      <description>&lt;p&gt;《&lt;strong&gt;劇場版世界計畫　崩壞的世界與無法歌唱的初音未來&lt;/strong&gt;》的4DX・MX4D版本，於（&lt;em&gt;2025年&lt;/em&gt;）06月06日在臺灣上映，臺灣現存營業中的所有4DX影廳共4座，以及MX4D影廳共1座都有上映（可惜新竹4DX和臺中MX4D一個拆了一個炸了，沒辦法上映……）。在數位場幾乎都下檔的現在，4DX・MX4D的上映讓人（尤其是南部朋友）終於又有地方可以看這部電影了；而原先緩慢增加的票房也因為這一波上映，彷彿注入了強心針：初音未來電影暫時重回週末票房前10名，週末票房久違地再次突破100萬！在週末過後，票房累計已達2,700餘萬元、觀影人次也超過99,000人次。當然這跟商業大片來比也許不值一提，但就粉絲向小片來說應該算不錯吧。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

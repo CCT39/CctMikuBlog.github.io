@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="auto" data-theme="auto">
+
+<head><script src="/CctMikuBlog.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CctMikuBlog.github.io/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>以初音未來為主角的電影《劇場版世界計畫》4DX・MX4D臺灣上映首週末票房組成之推估、研究及分析 | CCT的咪苦筆記</title>
+<meta name="keywords" content="初音未來, Project Sekai, 世界計畫, 田野調查, 劇場版世界計畫, 統計學應用, 臺灣">
+<meta name="description" content="《劇場版世界計畫　崩壞的世界與無法歌唱的初音未來》的4DX・MX4D版本，於（2025年）06月06日在臺灣上映，臺灣現存營業中的所有4DX影廳共4座，以及MX4D影廳共1座都有上映（可惜新竹4DX和臺中MX4D一個拆了一個炸了，沒辦法上映……）。在數位場幾乎都下檔的現在，4DX・MX4D的上映讓人（尤其是南部朋友）終於又有地方可以看這部電影了；而原先緩慢增加的票房也因為這一波上映，彷彿注入了強心針：初音未來電影暫時重回週末票房前10名，週末票房久違地再次突破100萬！在週末過後，票房累計已達2,700餘萬元、觀影人次也超過99,000人次。當然這跟商業大片來比也許不值一提，但就粉絲向小片來說應該算不錯吧。">
+<meta name="author" content="CCT">
+<link rel="canonical" href="http://localhost:1313/CctMikuBlog.github.io/posts/project-sekai-movie-4d-box-office-analysis/">
+<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/CctMikuBlog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/CctMikuBlog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/CctMikuBlog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/CctMikuBlog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/CctMikuBlog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh-tw" href="http://localhost:1313/CctMikuBlog.github.io/posts/project-sekai-movie-4d-box-office-analysis/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/CctMikuBlog.github.io/" accesskey="h" title="CCT的咪苦筆記 (Alt + H)">CCT的咪苦筆記</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/tags/" title="標籤">
+                    <span>標籤</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/categories/" title="分類">
+                    <span>分類</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/about/" title="關於我">
+                    <span>關於我</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      以初音未來為主角的電影《劇場版世界計畫》4DX・MX4D臺灣上映首週末票房組成之推估、研究及分析
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta">
+
+<span title='2025-06-14 00:00:00 +0000 UTC'>June 14, 2025</span>&nbsp;·&nbsp;<span>CCT</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager" src="http://localhost:1313/CctMikuBlog.github.io/posts/project-sekai-movie-4d-box-office-analysis/506350049_1156478343182887_5780749304322704053_n.jpg" alt="以初音未來為主角的電影《劇場版世界計畫》4DX・MX4D臺灣上映首週末票房組成之推估、研究及分析">
+        
+</figure>
+  <div class="post-content md-content"><p>《<strong>劇場版世界計畫　崩壞的世界與無法歌唱的初音未來</strong>》的4DX・MX4D版本，於（<em>2025年</em>）06月06日在臺灣上映，臺灣現存營業中的所有4DX影廳共4座，以及MX4D影廳共1座都有上映（可惜新竹4DX和臺中MX4D一個拆了一個炸了，沒辦法上映……）。在數位場幾乎都下檔的現在，4DX・MX4D的上映讓人（尤其是南部朋友）終於又有地方可以看這部電影了；而原先緩慢增加的票房也因為這一波上映，彷彿注入了強心針：初音未來電影暫時重回週末票房前10名，週末票房久違地再次突破100萬！在週末過後，票房累計已達2,700餘萬元、觀影人次也超過99,000人次。當然這跟商業大片來比也許不值一提，但就粉絲向小片來說應該算不錯吧。</p>
+<p>因為小編真的太喜歡這部電影了，從03月28日上映之後，時時刻刻都在追蹤票房變化和上映影城變化；然而上映伊始總共有70間電影院有映，而且每天的場次數可能都是4、5場起跳，如果要追蹤和保存所有這些「史料」，甚至還要算個比如什麼「滿座率」之類的，勢必要耗費大量時間（出於某些原因，這裡無法使用程式來爬資料），已經是社畜的小編怎麼可能有這種美國時間ry。所以在03月28日上映首週末開始，我幾乎都只進行了非常有限的調查，沒有捕捉到太多資料；爾後數週也頂多是定期追蹤每日票房的動態而已。比如我當初還調查到03月30日週日臺北市中心某W影城的某下午場，該場150個座位以上的影廳完全滿座、全數售出……儘管上映首週末票房還不錯，但可惜離當初的週末票房冠軍還有一大段距離。</p>
+<p>但是這一波4DX・MX4D的上映，終於是一次讓我個人圓夢(?)的機會：透過公開可查詢的資料，逐一肉眼稽查這部電影的所有影廳的所有場次大概賣得如何；終於可以以網路空戰搭配田野調查，在公開範圍內儘可能把資訊查個盤底朝天，就是想把這段歷史儘可能保留下來，讓今天上映的盛況像是時空膠囊一樣好好保存。或者至少，純粹只是想滿足個人的好奇心而已。</p>
+<p>準備好了嗎？讓我們回到電影院吧。</p>
+<h1 id="資料來源及聲明">資料來源及聲明<a hidden class="anchor" aria-hidden="true" href="#資料來源及聲明">#</a></h1>
+<blockquote>
+<p>[!WARNING]</p>
+<p>本文所提及之票房金額及售票數等，除註明為事後之公開統計資料外，均為個人之非官方推估資料，無任何商業意圖，且相關數據亦僅為推測值而非實際值。</p>
+<p>相關售票資訊係由小編CCT即作者本人於電影開演前，透過各電影院官方網站所公開之線上訂票系統，或電影院現場之自動售票機所示之座位表，或實際觀影現場計算人數，以此進行人工觀察與統計；所列售票數量僅為開演前數分鐘至數十分鐘記錄之已售出座位之概略計算，僅為票房近似值之推測，非真實票房數值。</p>
+<p>由於本文的非商業性質，本文亦將電影院系統企業名稱以英文字母代號來替代。同時，資料之調查、蒐集以及公開，符合《個人資料保護法》及《營業秘密法》之規定，將避免公開時間、空間及場次顆粒度過於詳細之推測數據。</p>
+<p>本文資訊僅作為影迷及粉絲交流用途，不代表片商、發行商、代理商或電影院等之立場。若有出入，請以官方資訊為準。</p>
+</blockquote>
+<h1 id="摘要">摘要<a hidden class="anchor" aria-hidden="true" href="#摘要">#</a></h1>
+<p>本文透過在《劇場版世界計畫　崩壞的世界與無法歌唱的初音未來》的4DX・MX4D版上映首週末，即2025年06月06日週五至同月08日週日共3天，以網路調查公開訂票系統，或本人實際前往觀影時計算該場概略之觀影人次，估算出全臺所有該電影，特別是4DX・MX4D版之上映電影院之票房及售出票數合計，並根據相關影廳、票價等公開資訊，定義並計算其「票房理論值」及「滿座率」等指標，僅以之方便衡量該電影的上映盛況。</p>
+<p>本文發現在該週末，有約超過8成的票房及約7成的票數來自4DX・MX4D版，全臺整體平均每場滿座率超過1/3，其中高雄W影城、信義W影城及嘉義I影城之平均滿座率均達5成以上；而代理商包廳舉辦的免費粉絲活動「After Live Party」確實計入了票房，且佔了4DX・MX4D版以外其餘票房和票數組成的絕大部分。這些票房的總和使得該電影重回週末票房前10名、令週末票房得以突破100萬元、也使累積觀影人次距離10萬只差臨門一腳；該電影4DX・MX4D版於臺灣上映首週末之盛況可見一斑。</p>
+<h1 id="研究範圍">研究範圍<a hidden class="anchor" aria-hidden="true" href="#研究範圍">#</a></h1>
+<ol>
+<li>
+<p>本文的研究時間範圍為2025年06月06日週五全天，至06月08日週日全天，共72小時。</p>
+</li>
+<li>
+<p>目標電影為《劇場版世界計畫　崩壞的世界與無法歌唱的初音未來》，若未指明版本，則主要指4DX・MX4D版本；一般的數位版等版本僅在文中稍微提及，並將特別標註。</p>
+</li>
+<li>
+<p>研究空間範圍為全臺灣，在研究時間範圍內有上映目標電影的所有電影院。</p>
+</li>
+</ol>
+<h1 id="名詞定義">名詞定義<a hidden class="anchor" aria-hidden="true" href="#名詞定義">#</a></h1>
+<ol>
+<li>週末：指週五、週六及週日。若未特別指明，即等同於前述本文的研究時間範圍（也就是說，週五票房也會算在週末票房）。</li>
+<li>票房：給定場次、電影院、時間段等指定時空範圍內，目標電影的票面收入。定義與「全國電影票房資訊平台」所稱之票房一致，惟本文為推測值。單位為新臺幣元。</li>
+<li>票數：指定時空範圍內，目標電影的售出電影票數量推測值；也可以視為是「觀影人次」。</li>
+<li>保留位：一場電影的影廳當中不對外發售的座位。</li>
+<li>總座位數：一場電影的影廳當中對外發售的座位（即，不含保留位）。本文為統計方便，亦不含輪椅位等特殊座位。</li>
+<li>滿座率：同一場電影的票數÷該影廳總座位數</li>
+<li>早場：開演時間在同一日清晨06:00至正午12:00之間的電影場次。</li>
+<li>票價：電影院售票系統公告各票種之價格，一般包括全票、早場票、優待票、會員票、愛心票等。為計算方便，此處不考慮片商交換票及套餐飲食等。單位為新臺幣元。</li>
+<li>票房理論值：在給定時間及空間範圍內，目標電影之4DX・MX4D版本，在假設所有場次滿座率均為100%，且所有電影票均為票價最貴（早場則套用早場時最貴）的情況下，計算出的票房。可以視為不可能達成的票房數值。單位為新臺幣元。</li>
+<li>（理論值）達成率：給定同一時空範圍下的票房÷其票房理論值。該值介於0%至100%之間，100%可以視為不可能達成之指標。</li>
+<li>4D（場）：在本文指4DX及MX4D之合稱。</li>
+<li>數位場：在本文指目標電影的非4D場，可細分為一般場和應援場。</li>
+<li>代理商：指電影《劇場版世界計畫》在臺灣之發行商M公司。</li>
+<li>AL（場）：全稱為After Live Party，即代理商於2025年06月08日週日於北、中、南各一間電影院所舉辦之特殊包場活動，參與者憑電影票根免費入場。</li>
+</ol>
+<h1 id="研究方法">研究方法<a hidden class="anchor" aria-hidden="true" href="#研究方法">#</a></h1>
+<ol>
+<li>票數估算方法：小編本人在首週末期間，以人工網路查詢或是實地前往電影院田野調查，透過計算已售出票數，或現場默默數人頭等方式，得出每一場售出多少電影票的推估值。</li>
+<li>票價估算方法：本文採最高及最低區間估算法，先將時段劃分為早場及非早場，並在各自時段找出最高票價及最低票價作為參考值。</li>
+<li>票房估算方法：根據推估的票數，分別乘以計算出的最高及最低票價，得出票房之推估區間；理論上真實數值將落在該區間內。</li>
+<li>包廳估算方法：訪問目標影廳之包廳申請表單及相關規則等來源，可以得出目標影廳之總座位數等資訊；惟包廳之實際價格乃根據個案商定之結果，缺乏公開資訊，因此本文無法進行直接估算。</li>
+<li>保留位判定方法：坦白講就是土法煉鋼。調查在電影上映前該影廳所排的所有時間，包括週末及次週平日，如果每一場的固定座位（通常在邊緣角落）均顯示已售出，那就認為是保留位（除非真的有人5天各3場共15場，每場都堅持去同一間電影院、坐同一個座位看同一部電影，而且還都先買好票，那我也只好認了）。</li>
+<li>其他：公開資訊主要取自文化部「全國電影票房統計資訊」網站、「開眼電影網」、以及「台北票房觀測站」粉絲專頁公布之票房資料以供參考。</li>
+</ol>
+<h1 id="4dxmx4d於臺灣上映前的背景03月28日至06月05日">4DX・MX4D於臺灣上映前的背景：03月28日至06月05日<a hidden class="anchor" aria-hidden="true" href="#4dxmx4d於臺灣上映前的背景03月28日至06月05日">#</a></h1>
+<p>《劇場版世界計畫》數位場於2025年03月28日，在臺灣的70間電影院上映，數位場之首週（03月23至30日）及首週末（03月28至30日）臺北及全臺票房均為第二名，全臺票房達810餘萬，票數達30,000餘票（這其中小編貢獻了幾張來著……）。</p>
+<p>隨著時間過去，電影場次自然減少，至約第7週起的2025年05月09日，根據個人調查，此時全臺僅存6間電影院上映：分別是臺北南港C影城、臺北內湖H影城、新北板橋S影城、桃園中壢S影城、桃園統領W影城，以及臺中文心S影城；接著大約維持每一週少一間的步調，從中壢S影城、內湖H影城、統領W影城到文心S影城依次下檔。至此，僅存南港C影城及板橋S影城，有上映《劇場版世界計畫》的數位場。</p>
+<p>然而在4D場上映前的06月05日，僅有板橋S影城維持一天一下午場，而南港C影城至此已從兩天一場變成四天一場，在研究時間範圍內（也就是週末）沒有上映任何一場，因此該週末數位場僅存板橋S影城週五、週六及週日共三場。</p>
+<p>不過，代理商除了公布4D場的上映消息以外，同時亦公布了AL場（After Live Party）之消息，將於06月08日於臺北欣欣S影城、臺中站前S影城及高雄夢時代S影城上映，粉絲將可憑票根免費入場觀賞。</p>
+<p>最後加上4D場全台上映的5間電影院：臺北信義W影城、林口三井W影城、嘉義I影城、臺南大遠百W影城，以及高雄大遠百W影城，我們的研究時間範圍內共有9間影城：5間4D、3間AL，以及1間數位。事後驗算，與「全國電影票房統計資訊」公布的該週末9間上映資料相符；這9間影城將在研究時間範圍內，上映42場4D（嘉義一天2場、其餘一天3場，共3天）、3場AL（實際上live各播了2輪，但僅各算一次包廳），以及3場數位場（一天1場），共48場。</p>
+<h1 id="準備工作06月05日">準備工作：06月05日<a hidden class="anchor" aria-hidden="true" href="#準備工作06月05日">#</a></h1>
+<p>在上映前，小編也做了一些事前準備：首先就是先算好「票房理論值」：先查詢影城的訂票系統，可以輕易算出該影廳的全部座位；接著利用前述保留位判定法扣除保留位後，可算出各4D場的總座位數：</p>
+<ul>
+<li>信義：136座位（2廳）</li>
+<li>林口：140座位（1廳）</li>
+<li>臺南：136座位（1廳）</li>
+<li>高雄：88座位（大遠百W影城，1廳）</li>
+<li>嘉義：32座位（MX4D廳）</li>
+</ul>
+<p>接著是AL場，非4D影廳。由於活動當天才得知具體影廳，方能透過影城提供之包廳調查表單，加上當天粉絲回報等來源，得知座位數據如下：</p>
+<ul>
+<li>欣欣：約344座位（2廳）</li>
+<li>臺中：約221座位（11廳）</li>
+<li>高雄：約244座位（夢時代S影城，1廳）</li>
+</ul>
+<p>最後順便看一下僅存的數位場：</p>
+<ul>
+<li>板橋：48座位（15廳）</li>
+</ul>
+<p>由於本文主要關注4D場，因此可以計算4D場的「票房理論值」。以上映4D場的某影城為例，早場時段最高價為早場票510元，其餘時段最高價為570元；研究時間段內該影城有3早場及6非早場，計算該影城理論值為673,200元。這個數字只是代表一個摸不到的天花板：使盡吃奶的力氣也達不到的數字，拿來作為純粹的參考值而已。以同樣的方式計算5間4D場影城的理論值總和，可以算出週末4D場<strong>票房理論值為2,472,240元</strong>：代表4D場賣得再好，也不會超過這個數字……除非允許站立啦。</p>
+<p>接著，我從電影院官網或訂票系統，查好所有5間4D影城的票價表（單位：新臺幣元），並以此作為估算票房之參考來源：</p>
+<ul>
+<li>信義W影城：
+<ul>
+<li>早場510</li>
+<li>優待550</li>
+<li>全票570</li>
+<li>會員510（<em>限儲值會員</em>）</li>
+</ul>
+</li>
+<li>林口W影城：
+<ul>
+<li>早場480</li>
+<li>優待500</li>
+<li>全票540</li>
+<li>會員470（<em>限儲值會員</em>）</li>
+</ul>
+</li>
+<li>臺南W影城：
+<ul>
+<li>早場490</li>
+<li>優待500</li>
+<li>全票520</li>
+<li>會員450（<em>限儲值會員</em>）</li>
+</ul>
+</li>
+<li>高雄W影城：
+<ul>
+<li>早場510</li>
+<li>優待520</li>
+<li>全票540</li>
+<li>會員460（<em>限儲值會員</em>）</li>
+</ul>
+</li>
+<li>嘉義I影城：
+<ul>
+<li>早場510</li>
+<li>全票530</li>
+<li>優待510</li>
+<li>愛心265</li>
+<li>會員430（<em>等級較高的會員</em>）</li>
+<li>會員480（<em>等級次之的會員</em>）</li>
+</ul>
+</li>
+</ul>
+<p>當然，票價的實際情況其實更複雜，例如可能有片商交換票（比如電影預售票等），或是套餐票在各影城有不同計算方式：電影套餐若有優惠，那麼哪些算在電影票、哪些算在食物，計算方式不盡相同。</p>
+<p>由於本文本來就是估計，因此這邊不考慮這些無法從公開資訊得知實際票面價格的票種。</p>
+<h1 id="4dxmx4d正式上映首日06月06日週五">4DX・MX4D正式上映首日：06月06日週五<a hidden class="anchor" aria-hidden="true" href="#4dxmx4d正式上映首日06月06日週五">#</a></h1>
+<p>準備工作完成後，這一天小編雖然一樣起了大早上班去，但只要稍有空檔，就會打開訂票系統看一眼。在5間4D場的早場各自開始前，我盡量從訂票網站持續觀察至不可見為止。</p>
+<p>到了中午，我算出了5間影城各自第一場早場，概略的售出票數、滿座率及票房估計值如表1（~符號代表大約）。</p>
+<p><em>表1：《劇場版世界計畫》4DX・MX4D上映的5間影城06月06日各自第一場早場概略的售出票數、滿座率及票房估計值。資料來源：作者自行調查統計</em></p>
+<table>
+	<thead>
+			<tr>
+					<th>影城</th>
+					<th>概略票數/總座位</th>
+					<th>滿座率</th>
+					<th>估算票房（新臺幣）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>信義</td>
+					<td>~66/136</td>
+					<td>48.53%</td>
+					<td>約33,660元</td>
+			</tr>
+			<tr>
+					<td>林口</td>
+					<td>~16/140</td>
+					<td>11.43%</td>
+					<td>約7,520–7,680元</td>
+			</tr>
+			<tr>
+					<td>臺南</td>
+					<td>~42/136</td>
+					<td>30.88%</td>
+					<td>約18,900–20,580元</td>
+			</tr>
+			<tr>
+					<td>高雄</td>
+					<td>~59/88</td>
+					<td>67.05%</td>
+					<td>約27,140–30,090元</td>
+			</tr>
+			<tr>
+					<td>嘉義</td>
+					<td>~23/32</td>
+					<td>71.88%</td>
+					<td>約6,095–11,730元</td>
+			</tr>
+			<tr>
+					<td><strong>小計</strong></td>
+					<td><strong>~206/532</strong></td>
+					<td><strong>38.72%</strong></td>
+					<td><strong>約93,475–103,740元</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>這時我發現了林口的票數特別低，而我的猜想是林口及其周遭是市郊，日間人口本來就較少，也許人都跑到臺北市上班去了，因此平日早場如此情有可原；根據後來的估算，果然週六林口的觀影人數就多得多，當然這是後話了。</p>
+<p>如此這般，接下來的2波都用類似的估算方法。到週五晚上，我最終計算了整個06月06日週五，《劇場版世界計畫》4D版票房估計值如表2。</p>
+<p><em>表2：《劇場版世界計畫》4DX・MX4D上映的5間影城06月06日週五全天概略的售出票數、滿座率及票房估計值。資料來源：作者自行調查統計</em></p>
+<table>
+	<thead>
+			<tr>
+					<th>影城</th>
+					<th>概略票數/總座位</th>
+					<th>滿座率</th>
+					<th>估算票房（新臺幣）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>信義</td>
+					<td>~222/408</td>
+					<td>54.41%</td>
+					<td>約113,220–122,580元</td>
+			</tr>
+			<tr>
+					<td>林口</td>
+					<td>~59/420</td>
+					<td>14.05%</td>
+					<td>約27,730–30,900元</td>
+			</tr>
+			<tr>
+					<td>臺南</td>
+					<td>~104/408</td>
+					<td>25.49%</td>
+					<td>約46,800–52,820元</td>
+			</tr>
+			<tr>
+					<td>高雄</td>
+					<td>~172/264</td>
+					<td>65.15%</td>
+					<td>約79,120–91,110元</td>
+			</tr>
+			<tr>
+					<td>嘉義</td>
+					<td>~37/64</td>
+					<td>57.81%</td>
+					<td>約9,805–19,150元</td>
+			</tr>
+			<tr>
+					<td><strong>小計</strong></td>
+					<td><strong>~594/1,564</strong></td>
+					<td><strong>37.98%</strong></td>
+					<td><strong>約276,675–316,560元</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>事後觀察公開資料，週五全臺實際票房約為29.5萬元，確實落在估計區間內，而且幾乎是正中央；而總票數604票，比我的估計值還高出一點。由於我的估計值來自各場開演前數分鐘至數十分鐘的座位數加總，在開演前一定有現場客持續購票，因此我認為低估很正常。此外，全臺僅存的數位場板橋S影城，本日票房則可忽略不計（售出約3張票）。</p>
+<p>當然，也是有可能存在觀影前因故退票的情況（我在追蹤座位時也有發現不少這種情況），因此也許有些影城最終的實際售票數字，比我預估的還低。除此之外，假如訂票系統是選定座位準備付款就標記為「已售出」的話，最終若未完成交易也會被取消座位，如果在這個空檔觀察，也會高估售票數量，不過並不清楚訂票系統是不是這樣設計的。</p>
+<p>另外，小編本人在06日週五，也在其中一間電影院看晚場的4DX：我先在開演前2分鐘按電影院的售票機來數座位，接著我故意挑最後排最角落以方便結束後在現場默默數人頭。最終我發現扣除保留位後，現場我算的人頭數（我有算自己），比我開演前在售票機上算被標註「售出」的座位數，還要少3個；我想這有可能就是前面說的退票或取消交易的情況導致。除非他們只是想要特典而不想看電影，但考慮到這種票價，我是有點難想像(#</p>
+<h1 id="4dxmx4d正式上映次日06月07日週六">4DX・MX4D正式上映次日：06月07日週六<a hidden class="anchor" aria-hidden="true" href="#4dxmx4d正式上映次日06月07日週六">#</a></h1>
+<p>很多人一週裡面最喜歡的就是星期六。</p>
+<p>綜觀許多電影，星期六通常是一個週末當中票房最高的一天，這一天許多人既是悠閒的放假狀態，又不像星期日那樣的準備收假憂鬱狀態，自然就有心情來看電影；我在這一天也起了個大早，去其中一間電影院看早場4DX，這次也像是幼X早點名(?)一樣，偷偷算了一下人頭。</p>
+<p>而到了下午，我前往了該週末唯一僅存的數位場電影院：板橋S影城，看了它的下午場，那一場包含我自己共有17人觀影，滿座率超過1/3。考慮到已經上映這麼久，我覺得還滿厲害的XD，這一間電影院每週末都還有不少人在看《劇場版世界計畫》；我還想特別提一下前幾週的是，小編本人05月24日週六也去那一間電影院看了一場《劇場版世界計畫》（對，我刷了好多次），當時已經是距離電影上映過了快2個月了，這部電影也不是什麼商業大片，而那一場的滿座率居然還高達8成，大人小孩、長輩青年、孔孟老莊、高矮胖瘦，應有盡有。難怪可以存活至今，respect。</p>
+<p>抓住機會田野調查加上網路調查後，這天晚上，我也匯總了一下06月07日週六，《劇場版世界計畫》4D版票房估計值如表3。</p>
+<p><em>表3：《劇場版世界計畫》4DX・MX4D上映的5間影城06月07日週六全天概略的售出票數、滿座率及票房估計值。資料來源：作者自行調查統計</em></p>
+<table>
+	<thead>
+			<tr>
+					<th>影城</th>
+					<th>概略票數/總座位</th>
+					<th>滿座率</th>
+					<th>估算票房（新臺幣）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>信義</td>
+					<td>~269/408</td>
+					<td>65.93%</td>
+					<td>約137,190–149,730元</td>
+			</tr>
+			<tr>
+					<td>林口</td>
+					<td>~133/420</td>
+					<td>31.67%</td>
+					<td>約62,510–69,300元</td>
+			</tr>
+			<tr>
+					<td>臺南</td>
+					<td>~100/408</td>
+					<td>24.51%</td>
+					<td>約45,000–50,560元</td>
+			</tr>
+			<tr>
+					<td>高雄</td>
+					<td>~147/264</td>
+					<td>55.68%</td>
+					<td>約67,620–78,210元</td>
+			</tr>
+			<tr>
+					<td>嘉義</td>
+					<td>~38/64</td>
+					<td>59.38%</td>
+					<td>約10,070–19,740元</td>
+			</tr>
+			<tr>
+					<td><strong>小計</strong></td>
+					<td><strong>~687/1,564</strong></td>
+					<td><strong>43.93%</strong></td>
+					<td><strong>約322,390–367,540元</strong></td>
+			</tr>
+			<tr>
+					<td><strong>週五週六小計</strong></td>
+					<td><strong>~1,281/3,128</strong></td>
+					<td><strong>40.95%</strong></td>
+					<td><strong>約599,065–684,100元</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>本日估算4D版小計687票，加上板橋S影城數位場17票，共約704票；不過根據事後調查公開資料，週六票房實際約36.0萬元，742票。票房勉強落在估計區間內，但票數倒是低估了不少。估計值低的原因同樣，由於是各場開演前數分鐘至數十分鐘查詢的數據，因此低估的部分，我想大多也應該是開演前不久才購入的現場票；至於實際票房偏高的原因就不得而知了，也許這天絕大部分的觀影人次都不是用儲值會員票。</p>
+<h1 id="4dxmx4d正式上映三日06月08日週日">4DX・MX4D正式上映三日：06月08日週日<a hidden class="anchor" aria-hidden="true" href="#4dxmx4d正式上映三日06月08日週日">#</a></h1>
+<p>這一天我也同樣是在網路調查與田野調查的漩渦中度過，不過這天比較特別，除了板橋S影城的數位場，以及其他5間影城4D場以外，還是代理商在北中南3間影城舉辦AL場的一天，因此這天最重要的任務就是觀察AL場。我透過實際參加AL場，加上各地粉絲的貼文，得知了這3場的具體影廳及扣除保留位的座位數：臺北欣欣S影城2廳，座位數約344座位、臺中站前S影城11廳，約221座位、高雄夢時代S影城1廳，約244座位，共約809座位。</p>
+<p>此時我猜想AL場是代理商透過包廳，播放6團的after live（每次約30分鐘，包廳各播了2次），並可能將票房計入《劇場版世界計畫》（其實也合理，畢竟那些片段本來就算是該電影裡的片段，只是日本那邊會定期換團，臺灣這邊是固定）。至於票房，儘管包廳的價格通常是被影廳實際座位數，及影片或包廳時數影響，但由於具體的費用是個案處理，因此這裡無法掌握足夠的資訊來估計票房，只能夠事後粗估，因此AL場我們放到最後再說。</p>
+<p>先來分析週日的數位場：這次我就沒有去板橋S影城現場了，不過我在開演前半小時查詢訂票網站，發現已售出9個座位，票房估計應不會超過3,000元。當然，也許這半小時會有一些現場客，但無論如何，實際售出票數粗估會超過或等於9票，而天花板頂多就是48票。</p>
+<p>接著是4D場，這天晚上我匯總了06月08日週日，《劇場版世界計畫》4D版票房估計值如表4。</p>
+<p><em>表4：《劇場版世界計畫》4DX・MX4D上映的5間影城06月08日週日全天概略的售出票數、滿座率及票房估計值。資料來源：作者自行調查統計</em></p>
+<table>
+	<thead>
+			<tr>
+					<th>影城</th>
+					<th>概略票數/總座位</th>
+					<th>滿座率</th>
+					<th>估算票房（新臺幣）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>信義</td>
+					<td>~195/408</td>
+					<td>47.79%</td>
+					<td>約99,450–108,270元</td>
+			</tr>
+			<tr>
+					<td>林口</td>
+					<td>~47/420</td>
+					<td>11.19%</td>
+					<td>約22,090–24,600元</td>
+			</tr>
+			<tr>
+					<td>臺南</td>
+					<td>~37/408</td>
+					<td>9.07%</td>
+					<td>約16,650–18,700元</td>
+			</tr>
+			<tr>
+					<td>高雄</td>
+					<td>~129/264</td>
+					<td>48.86%</td>
+					<td>約59,340–68,670元</td>
+			</tr>
+			<tr>
+					<td>嘉義</td>
+					<td>~23/64</td>
+					<td>35.94%</td>
+					<td>約6,095–11,870元</td>
+			</tr>
+			<tr>
+					<td><strong>小計</strong></td>
+					<td><strong>~431/1,564</strong></td>
+					<td><strong>27.56%</strong></td>
+					<td><strong>約203,625–232,110元</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>那麼，與我估計週日的20幾萬、431票相比，實際的週日票房是多少呢？</p>
+<p>根據事後調查公開資料，實際週日票房約38.4萬，1,145票！</p>
+<p>即使4D場加上數位場，實際票房還多了約15–20萬，票數多了約700票；看來真相只有一個，就是粉絲免費參加的AL場，確實被計入了票房！至於票數，由於AL場所在的各影廳總座位數約800個，而不是700個，所以可以合理推斷這裡的700票，指的是週日當天有實際到AL場參加活動大概的粉絲數，而不是包廳的總座位數。當天有實際到場參加的你我，都貢獻了1票。</p>
+<p>接著來看看週末三日票房的估計值加總如表5。</p>
+<p><em>表5：《劇場版世界計畫》4DX・MX4D上映的5間影城06月06–08日週末三日概略的售出票數、滿座率及票房估計值。資料來源：作者自行調查統計</em></p>
+<table>
+	<thead>
+			<tr>
+					<th>影城</th>
+					<th>概略票數/總座位</th>
+					<th>滿座率</th>
+					<th>估算票房（新臺幣）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>信義</td>
+					<td>~686/1,224</td>
+					<td>56.05%</td>
+					<td>約349,860–380,580元</td>
+			</tr>
+			<tr>
+					<td>林口</td>
+					<td>~239/1,260</td>
+					<td>18.97%</td>
+					<td>約112,330–124,800元</td>
+			</tr>
+			<tr>
+					<td>臺南</td>
+					<td>~241/1,224</td>
+					<td>19.69%</td>
+					<td>約108,450–122,080元</td>
+			</tr>
+			<tr>
+					<td>高雄</td>
+					<td>~448/792</td>
+					<td>56.57%</td>
+					<td>約206,080–237,990元</td>
+			</tr>
+			<tr>
+					<td>嘉義</td>
+					<td>~98/192</td>
+					<td>51.04%</td>
+					<td>約25,970–50,760元</td>
+			</tr>
+			<tr>
+					<td><strong>合計</strong></td>
+					<td><strong>~1,712/4,692</strong></td>
+					<td><strong>36.49%</strong></td>
+					<td><strong>約802,690–916,210元</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>事後的公開資料顯示，<strong>週末合計實際票房為1,039,005元，售出2,491票</strong>。票數與我估算的4D場約1,712票和數位場約29票（週五3+週六17+週日9）的加總還差了約750票；排除誤差，絕大部分應該也是週日AL場的貢獻，票房亦然。因此從後來公布的整個週末的票房公開資料也可以得出前面的結論：儘管AL場是粉絲免費參加的活動，但也實實在在地被計入了票房。而且也因為AL場的存在，《劇場版世界計畫》能夠突破週末100萬票房、也能夠重回週末票房前10名；假如只有4D場，我想100萬是不可能了，而前10則是非常危險。</p>
+<p>更重要的是，根據「全國電影票房統計資訊」，《劇場版世界計畫》自03月28日上映以來，截至2025年06月08日週日的票房，來到了<strong>27,199,976元</strong>，而票數更達<strong>99,107票</strong>，週末過後距離10萬票大關只差893票，幾乎是臨門一腳；而這其中除了4D版有主要貢獻外，週日AL場的700多票也功不可沒。至於僅存唯一的數位場影城，儘管票房本身佔比低，但它三日的平均滿座率也超過20%（~29/144），在數位場已經上映了2個半月的現在能有如此成績，也是很值得關注的存在。</p>
+<h1 id="事後總結">事後總結<a hidden class="anchor" aria-hidden="true" href="#事後總結">#</a></h1>
+<p>透過這一次橫跨整個《劇場版世界計畫》4D版上映首週末，小編的網路調查以及實地考察，蒐集並估算觀影人次和票房資料，我發現了這些有趣的事情：</p>
+<ol>
+<li>週日由代理商舉辦的免費After Live，儘管參與者免費參加，但是這些包廳費及座位都有被計入票房，且可能佔了週末票房的1成甚至更多，票數更佔了近3成。</li>
+<li>4D版約貢獻了本週末超過8成的票房和約7成的票數，且滿座率及票房理論值達成率平均超過3成，個人認為是不錯的成績。</li>
+<li>《劇場版世界計畫》距離10萬票大關只差臨門一腳，其中作為主力的4D版之外，AL場的助攻功不可沒。</li>
+<li>根據估算，高雄W影城、信義W影城及嘉義I影城的平均滿座率均達5成以上，理論值達成率亦然：扣除保留位，平均每場都是超過一半的影廳都坐滿了人。</li>
+<li>根據估算，臺南W影城及高雄W影城週五觀影人次最多，其餘電影院都是週六觀影人次最多；差異最極端的是林口W影城，週六的觀影人次比週五和週日的總和還多，不確定該影城的其他電影是不是也這樣，不過這也許與林口該影城本身的地理位置位於都會區的郊區這點息息相關。</li>
+</ol>
+<p>事後持續追蹤公開資訊，就在隔天，也就是06月09日週一，全臺又售出了138票、64,150元、10日週二售出140票、64,935元，截至06月10日周二，距離10萬票只差615票；也許可以期待週六（14）左右達成目標。</p>
+<p>至於週二以後的場次更新，數位場方面，板橋S影城仍然繼續維持一天1場；而南港C影城在06月11日週三13:35（印象中）的場次結束後，確認已完全下檔。4D場方面，在週三某4D大片上檔來勢洶洶的壓境下，信義W影城暫時守住全部城池，尚能維持1天3場；而其餘影城也力保山河，僅各減少1場，目前各戲院每天場次為信義3、林口2、臺南2、高雄2、嘉義1。考慮到影城主要參考票房來安排接下來的場次，我想也許這從側面說明了，各影城認為本週末《劇場版世界計畫》4D版的首週末票房，還是滿不錯的。儘管3,000萬票房目前看來是希望渺茫，但是10萬票我想已經猶如探囊取物了吧XD。</p>
+<p><strong>CCT</strong></p>
+<p><strong>2025年06月14日</strong></p>
+<hr>
+<blockquote>
+<p><strong>原文出處</strong></p>
+<p>本文最初發布於 <strong>2025-06-14</strong>，
+原文連結如下，本站版本僅針對排版進行改善及更正錯別字，未改動內文：</p>
+<ul>
+<li>Facebook 未來群像：https://www.facebook.com/photo.php?fbid=1157963873034334&amp;set=pb.100064621965457.-2207520000&amp;type=3</li>
+<li>巴哈姆特：https://home.gamer.com.tw/artwork.php?sn=6160713</li>
+</ul>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E5%88%9D%E9%9F%B3%E6%9C%AA%E4%BE%86/">初音未來</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/project-sekai/">Project Sekai</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E4%B8%96%E7%95%8C%E8%A8%88%E7%95%AB/">世界計畫</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%94%B0%E9%87%8E%E8%AA%BF%E6%9F%A5/">田野調查</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E5%8A%87%E5%A0%B4%E7%89%88%E4%B8%96%E7%95%8C%E8%A8%88%E7%95%AB/">劇場版世界計畫</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%B5%B1%E8%A8%88%E5%AD%B8%E6%87%89%E7%94%A8/">統計學應用</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E8%87%BA%E7%81%A3/">臺灣</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/CctMikuBlog.github.io/">CCT的咪苦筆記</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

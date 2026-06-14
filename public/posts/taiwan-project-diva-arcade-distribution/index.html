@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="auto" data-theme="auto">
+
+<head><script src="/CctMikuBlog.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CctMikuBlog.github.io/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>臺灣 Project DIVA Arcade 機台傾向分布圖 | CCT的咪苦筆記</title>
+<meta name="keywords" content="初音未來, Project DIVA, 名伶計畫, 田野調查, 作品集, 技術性研究, 統計學應用, 臺灣">
+<meta name="description" content="大家好，這裡是CCT。
+「初音未來 Project DIVA Arcade Future Tone」（下稱DIVA AC或DIVA）是一款音樂遊戲街機，從2010年中開始營業，2011年的01月底左右引進臺灣，至今已經將近15個年頭；而我個人則是2013年01月入坑至今的玩家。儘管全臺乃至日本的據點和玩家都已經所剩無幾，不過活躍的社群仍然存在。">
+<meta name="author" content="CCT">
+<link rel="canonical" href="http://localhost:1313/CctMikuBlog.github.io/posts/taiwan-project-diva-arcade-distribution/">
+<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/CctMikuBlog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/CctMikuBlog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/CctMikuBlog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/CctMikuBlog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/CctMikuBlog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh-tw" href="http://localhost:1313/CctMikuBlog.github.io/posts/taiwan-project-diva-arcade-distribution/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/CctMikuBlog.github.io/" accesskey="h" title="CCT的咪苦筆記 (Alt + H)">CCT的咪苦筆記</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/tags/" title="標籤">
+                    <span>標籤</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/categories/" title="分類">
+                    <span>分類</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/CctMikuBlog.github.io/about/" title="關於我">
+                    <span>關於我</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      臺灣 Project DIVA Arcade 機台傾向分布圖
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-01-11 00:00:00 +0000 UTC'>January 11, 2026</span>&nbsp;·&nbsp;<span>CCT</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager" src="http://localhost:1313/CctMikuBlog.github.io/posts/taiwan-project-diva-arcade-distribution/615156381_1338414341655952_6690196048601830640_n.jpg" alt="臺灣 Project DIVA Arcade 機台傾向分布圖">
+        
+</figure>
+  <div class="post-content md-content"><p>大家好，這裡是CCT。</p>
+<p>「初音未來 Project DIVA Arcade Future Tone」（下稱DIVA AC或DIVA）是一款音樂遊戲街機，從2010年中開始營業，2011年的01月底左右引進臺灣，至今已經將近15個年頭；而我個人則是2013年01月入坑至今的玩家。儘管全臺乃至日本的據點和玩家都已經所剩無幾，不過活躍的社群仍然存在。</p>
+<p>這是一個由我主導的，DIVA這款音樂遊戲街機測台計畫：找了幾位臺灣玩家志願者，透過跟日本玩家不斷交換資訊，加上全臺灣跑透透去測每一台，得知它們的「機台傾向」（後面會說說這是啥），最終統整資訊做出這份圖表。這些資訊以往在臺灣都是很零碎的，然而它又很重要（玩到一定程度就常常不得不面對，或者至少會有明顯的感觸），今天終於系統性地整理起來了，最後我做成這個<a href="https://cct39.github.io/DivaAcTw.github.io/">小網頁</a>作為DEMO。</p>
+<p>這篇文章的受眾是所有人，無論有沒有接觸過音樂遊戲，我覺得也許只要有點興趣都可以看下去，並大概理解我們的工作。我會盡量用大眾的語言描述，避免使用一些音遊的專門詞語，或者至少會先解釋。</p>
+<p>接下來會逐一解釋：從音樂遊戲通常是什麼樣子，講到這款遊戲的規則導致它的特殊之處，再說這種特殊的地方導致「機台差」的重要性在這款遊戲被大幅放大乃至成為決定性的因素，最後再說回我們最近在做的工作（機台差可以理解成製造上的各種公差，即機台每批製造之間細微的硬體或韌體差異）。</p>
+<h1 id="diva的規則導致的特殊性不追求打準而是有偏但不多">DIVA的規則導致的特殊性：不追求打準，而是有偏但不多<a hidden class="anchor" aria-hidden="true" href="#diva的規則導致的特殊性不追求打準而是有偏但不多">#</a></h1>
+<p>儘管從我這位玩了13年的玩家口中說出來可能沒什麼說服力，但我認為這款遊戲的特殊之處不僅僅是我們主觀心理上認為它特別，而是它在音樂遊戲街機裡面，客觀上真的有不少特別之處。通常音樂遊戲的玩法是照著節拍，打正確的按鍵或位置；而且打出連續正確的越多（即，連的combo越多）通常額外的獎勵分數也越多。大多也都有類似長按（HOLD）這種東西，比如有給定的起點和終點，長度不盡相同，在這中間就要一直按著。在遊戲中想要獲得最高分，不外乎也是追求每一顆鍵都打最準（通常最佳判定會是一個時間範圍，從一個基準點開始往正負比如幾十或幾百毫秒內打中的話，獲得的分數相同並且是最佳的），我想大部分的音樂遊戲街機的規則都是這樣運作的。</p>
+<p>而機台這種機械免不了會有製造公差的存在，一般認為這種細微的硬體或韌體差異，可能導致實際在玩的時候，可能會讓人覺得一些台比較容易打準，或者判定寬度不太一樣；這邊的「差異」不是指店家有沒有好好修按鍵這種外在的差異，而是指每台機台更細微的內在的差異，比如主機板、記憶體等核心零部件的製造公差，這是沒法透過更換按鍵等日常維護來改變的，而是一些機台內在的差異，這邊我們就叫它是「機台差」。對大部分音遊街機來說，因為是追求打最準，這種差異不會是決定性的：最佳判定是一個時間範圍，這個範圍有寬有窄但一定存在；在各種其他條件都不變的情況下，要打到同樣的高分，基本上是容不容易的問題，而不是可不可能的問題。</p>
+<p>但是DIVA這款遊戲奇葩就奇葩在，因為它的規則導致前面說的那種機台差非常重要，打出指定的高分還真的是可不可能的問題。再講白一點，就是如果挑錯機台那真的是浪費力氣，家裡請什麼都沒用，即使把最頂尖的玩家找來，甚至寫一個機器人或找一個外星人去打都沒用，因為不會就是不會。如果臺灣沒有那種機台，那還真的得去日本打，而且真有活生生的例子：比如有一首歌叫做melody&hellip;，它的紅譜已知最高分的打法，以臺灣現存的機台，全榜大概前20幾名之內就不可能打進去了，而且可以證明它不可能。</p>
+<p>造成這種差距的主因是這款遊戲的長按（HOLD）跟別人不一樣：這裡每一個長按的長度都是固定5秒（嚴格來說是5又60分之1秒），在這5秒內，每1幀（frame，1/60秒）都會跑一點點分數（比如按著1顆每1幀就會+10分）；只要按滿5秒，除了原本跑的那些分數之外，最後還會花1/60秒的時間來額外送你豐厚的bonus分數作為獎勵（這叫做max hold bonus，在那1/60秒那一瞬間能拿到bonus相當於按著2.5秒的分數，夠豐厚吧）。</p>
+<p>但是，長按中間完全有可能會飛來一個自己的按鍵（比如按著圈鍵才按2秒，就有一個圈鍵飛過來），這時為了保持combo連著，就會不得不放掉按著的長按，才能空出圈鍵去打那個圈。當然另一方面，也是可以繼續按著圈長按，但這時就要被迫放棄打那顆剛飛來的圈鍵，造成的代價是combo斷掉會少很多分數，生命值也會減少。這邊先給這兩個情境一個代號：選擇放掉長按再去打圈鍵維持combo是<strong>決策A</strong>，放棄打圈鍵繼續長按得分但讓combo斷掉是<strong>決策B</strong>。</p>
+<p>這種規則直接會造成兩個結果：</p>
+<ol>
+<li>
+<p><strong>故意無視或打錯一些按鍵，總分可能反而會更高：<strong>如果有一個地方，決策B（放棄combo）的總分會大於決策A（放棄長按），那就可以選擇決策B。也就是說，想追求最高分，可能會需要故意放棄按鍵，具體的放棄方式通常是故意無視和故意打錯，這種行為被叫做</strong>score attack（SA）</strong>。整首歌能獲得最高分的最佳打法理論上可以被計算出來，但是複雜度極高（宇宙的年齡都不夠拿來暴力破解），乃至過去常常有比計算速度的<strong>軍備競賽和資訊戰</strong>（就是指我算出來，但是自己刷榜不跟大家講）的存在，而且直到這兩年都還有一些歌有新的更高分的打法被玩家發現。</p>
+</li>
+<li>
+<p>**為了拿更高分，長按的前後必須故意打偏：**以前面決策A為例，假如長按（HOLD）圈開始到結束是2秒，那對於結束的那顆鍵來說，晚1幀結束只要還落在最佳判定內，就能再額外多10分（因為多按著那1幀），而早1幀開始同理，就相當於把一個伸縮棒往兩邊各拉長一點，整個棒子就會整體長一點。這會造成前面例子的那條長按，理論上的最高分可能不是按2秒整，而是2秒外加額外的3或4幀左右。而為了達到這個目的，就不能只打準，而是兩邊各要早一點點或晚一點點，不夠偏就至少會少個幾十分，而太偏又會跑到別的判定，分數少更多。整首歌有HOLD的地方大都這樣打，而偏偏很多歌又有很多HOLD，所以玩家到後來都在追求這門藝術，或者要說偏執也行。</p>
+</li>
+</ol>
+<h1 id="追求恰到好處的偏這種特殊性大幅放大了機台差的重要性">追求恰到好處的偏，這種特殊性大幅放大了機台差的重要性<a hidden class="anchor" aria-hidden="true" href="#追求恰到好處的偏這種特殊性大幅放大了機台差的重要性">#</a></h1>
+<p>接下來聚焦在前面的<strong>結果2.</strong> ，故意打偏這件事：前面說我們想要找的不是最準的位置，而是「最佳判定內最早的位置」或「最佳判定內最晚的位置」，看每一顆鍵的需求是什麼。這裡就充分體現出機台差的重要性了。</p>
+<p>「機台差」可能是因為各種硬體、韌體等差異，使得時間的計算被四捨五入到不同幀，並導致最佳判定的範圍不同，或者更多原因共同導致的結果。在這款遊戲的最佳判定穩定的範圍是最準1幀外加早和晚各1幀（共3幀），有時是早有2幀晚有1幀（共4幀）、有時是早1晚2（共4幀）、有時早晚都有2（共5幀）；這個「有時」指的是每一顆鍵都不太一樣之外，每一台機台也不太一樣：即同一顆鍵的最佳判定寬度在每一台機台都有一些差異。</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>題外話，其實氣溫和濕度等其他因素一般認為也會影響機台的判定，但這是另一個話題，有另外的專有名詞來描述，比如「時間差」、「日付差」等。我覺得「機台差」跟溫濕度等其他原因造成的差異之間，有點像天體進動跟章動之間的關係XD，只是可能沒那麼規律</p>
+</blockquote>
+<p>平常這種差異造成的也許就只是10分或者幾十分的差距，看起來還好；但假如少的那一幀正好是可以拿到那個超豐厚bonus的那一幀呢？</p>
+<p>前面說到，按滿5秒（300幀）之後，系統會花1/60秒（1幀）來送你超豐厚獎勵max hold bonus；如果沒有額外這1幀，那雖然按滿，但超豐厚獎勵卻是拿不到的。但問題是，也許這關鍵的1幀就真的只存在其他台（比如前面說最佳判定有5幀那台）啊？我這台不夠寬，差的那1幀好死不死特別重要，這很要命因為這台根本拿不到。</p>
+<p>這就是機台差很關鍵的原因。</p>
+<h1 id="不同機台也有不同個性歸納分類機台差得出的機台傾向光譜">不同機台也有不同個性：歸納分類機台差得出的機台傾向光譜<a hidden class="anchor" aria-hidden="true" href="#不同機台也有不同個性歸納分類機台差得出的機台傾向光譜">#</a></h1>
+<p>不過，機台差的這種差異不是線性的：不是說寬的台就寬、窄的台就窄，而是要看歌、要看地方（寬窄指的是比如前面說的，最佳判定的範圍有幾幀，範圍比較大就代表比較寬，有點像箭靶的紅心是大或小，大代表相對容易射中）。有些台打某些歌比較寬、某些歌比較窄；而另一些台是相反。同一首歌也有可能某些地方寬、某些地方窄。每一台各有優劣、各有它的長處和短處、都有自己的個性；有些台個性很像可以湊成一堆，和另一些台很不一樣。有些個性比較常見、有些個性比較特殊。</p>
+<p>所有機台的所有個性可以畫成一個光譜，就叫「機台傾向」。</p>
+<p>或者說是：</p>
+<blockquote>
+<p><strong>「一個光譜、兩大傾向、三大分類、數個次分類」</strong></p>
+</blockquote>
+<p>傾向的兩端就以代表性的歌來命名，有點像捷運「往淡水」或「往象山」一樣；三大分類也是代表性的歌名，有點像板橋線、南港線、土城線，加起來變板南線。每個捷運站就像一個細分類，整條捷運線就像一個光譜。</p>
+<p>這些所有的資訊都是日本玩家長期、大範圍、多人、資訊充分交換和流通的情況下，歸納統整的結果；這些結果源於他們追求高分的過程中，不得不面對的課題。</p>
+<p>另一方面，臺灣一直以來的資訊就非常零碎，長期以來都有零星被討論沒錯，但是資訊少、也不成系統。碰巧小編個人去（2025）年08月去了魔法未來和當地玩家交流，他們分享他們長期累積的成果，我才意識到是時候該做一些事情了。</p>
+<p>這也是我想做這項工作的動機。</p>
+<p>也許是想給10年前的自己一個交代吧，當時有意識到機台差的存在，並且會看歌選擇要去一中還是逢甲打（一中指當時的育才娃娃帝國、逢甲指娃娃帝國倫敦館，今天都已經不存在）。</p>
+<p>有意識到機台差是沒錯，有但不多，只有很少數的歌有感之外，也沒留下什麼有用的資訊。那時覺得很神的機台是逢甲娃娃帝國倫敦館左台，事後想想那台應該真的很特殊，當時很多臺中玩家都有感受到，可能真的是很稀有的類別……雖然現在那台已經不見蹤跡了，想亡羊補牢都來不及。</p>
+<h1 id="全臺灣的diva機台個性普查介紹一下我們最近在忙什麼">全臺灣的DIVA機台個性普查：介紹一下我們最近在忙什麼<a hidden class="anchor" aria-hidden="true" href="#全臺灣的diva機台個性普查介紹一下我們最近在忙什麼">#</a></h1>
+<p>還記得前面說到，有時候差的那一幀正好是可以拿到那個超豐厚bonus的那一幀嗎？其實這是很好的實驗對象：因為差的那一幀特別明顯，有拿到bonus的話就一翻兩瞪眼，很容易看出來，錄下來的話說服力很高。我們先幫這種地方取個名字，叫做「可能會滿的地方」，長按到最後順利拿到bonus這件事就叫做「HOLD滿」。</p>
+<p>去年魔法未來大阪場聚餐的日本玩家分享給我他們的資料，上面清楚記載機台傾向各細分類之下再更細部那些沒有名字的分類（有點像波長660nm和680nm我們都叫它紅色，但是不太一樣），很多歌的很多難度，那些「可能會滿的地方」分別在每一類機台會不會「HOLD滿」，上面寫得一清二楚。</p>
+<p>在最開始，我先測了離我最近的，我常去的機台，大概瞭解它的個性之後，我開始設法留住這一切史料；全臺灣有10間店共14台，我也想透過實驗來逐一釐清範圍，知道它們是什麼個性。為此，我設計實驗方法：</p>
+<ol>
+<li>
+<p>理論依據是日本人給的那份資料，我們假設它是正確的。</p>
+</li>
+<li>
+<p>之後測太多可能會亂，所以永遠留證據，永遠錄影。</p>
+</li>
+<li>
+<p>測出一個結果之後去對資料，就可以縮小不確定性，測到逐漸縮小到一定程度為止，得出該機台的細分類一定在某個較小的範圍內，從而知道它的個性。</p>
+</li>
+<li>
+<p>也許會測到發現原始資料自相矛盾的地方（比如透過3. 不斷迭代，卻縮到變空集合）：</p>
+<ol>
+<li>
+<p>　同一天測出矛盾就認為是「時間差」（前面說的溫濕度等其他條件改變而造成的差異），不繼續追究；</p>
+</li>
+<li>
+<p>　不同天發生矛盾就多測幾天，試著找出規律；</p>
+</li>
+<li>
+<p>　實在解釋不了就回饋給日本人，反正有錄影證據。</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>為此，我先買了手機架，可以架在旁邊錄影；我還買了可攜式的溫濕度計帶在身邊，以放在機台上打大概10首歌之後為準，紀錄溫濕度。首先透過實測取得我常去的臺北某台的證據後，我開始找幫手，最後有兩位志願者協助我測台，臺中1台和臺北大概6台左右的部分錄影是他們提供。</p>
+<p>測到一半的時候發現一個問題：機台可能會搬來搬去的，左右對調乃至換一家店鋪都有可能，我們怎麼知道這台就是那台呢？經過了各種嘗試之後我們找到記錄機台ID的方式。所以追加實驗方法：</p>
+<ol start="5">
+<li>紀錄溫濕度之外還要紀錄測試時間和機台ID。</li>
+</ol>
+<p>紀錄時間是因為我們那時還遇到別的問題，我們暱稱叫「<strong>週期振盪（period oscillation）台</strong>」，就是隔一天會換成一個截然不同的個性。這是我買了幾張高鐵票，用掉幾個週末才好不容易測出的結論，真是謝了。更鳥的是，可能是氣溫差的關係，12月開始它另一個個性好像又不見了，重開機也回不去，謝了。機台差具體成因的實驗驗證可能是接下來的課題，反正我暫時不想追究(#</p>
+<p>在這3個多月，我們陸續測了臺灣現存的10店14台：包括臺北6店8台、新竹1店1台、臺中1店1台、臺南1店2台、高雄1店2台。每測一台快則30分鐘、慢則6小時（不含交通時間），揮灑著自己的血汗錢來滿足好奇心，這份地圖和圖表就是努力的結晶。</p>
+<h1 id="最後說說這款遊戲">最後說說這款遊戲<a hidden class="anchor" aria-hidden="true" href="#最後說說這款遊戲">#</a></h1>
+<p>整理出來了，然後能幹嘛？</p>
+<p>對玩家來說這就像是重要的基礎建設，想打什麼歌，先看機台個性，挑一個個性相符的打，可以節省很多力氣……畢竟前面也說一旦挑錯台就真的再怎麼嘗試都沒用。假如不知道哪些歌個性相符，至少還有這個作為依據去自己測試，不會漫無目的、不用真的一台一台測，同個性的挑一台好打的就好。</p>
+<p>說是這麼說，但今天臺灣幾乎也沒得選了，除了臺北以外很多地方都沒有DIVA了，即使有也只有一間店……也許這項工作在十幾年前，甚至哪怕是疫情前做，意義都大得多。不過起碼也可以說，就是我個人想趁還能玩到機台的時候，趕快完成以前的心願吧：10年前花了多少力氣在錯的機台打錯的歌，當時想要的東西今天終於有能力給了，總算是能治癒童年吧(#</p>
+<p><strong>CCT</strong></p>
+<p><strong>2026年01月11日</strong></p>
+<h1 id="鳴謝敬稱略順序不拘">鳴謝（敬稱略、順序不拘）<a hidden class="anchor" aria-hidden="true" href="#鳴謝敬稱略順序不拘">#</a></h1>
+<ul>
+<li>
+<p>Simpleton <em>（臺灣中部及北部DIVA玩家）</em></p>
+</li>
+<li>
+<p>LLC <em>（臺灣北部DIVA玩家）</em></p>
+</li>
+<li>
+<p>とい <em>（日本近畿圈DIVA玩家）</em></p>
+</li>
+<li>
+<p>華麗なるおとうとくん★ <em>（日本北海道DIVA玩家）</em></p>
+</li>
+<li>
+<p>なつ <em>（日本中京圈DIVA玩家）</em></p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>原文出處</strong></p>
+<p>本文最初發布於 <strong>2026-01-11</strong>，
+原文連結如下，本站版本僅針對排版進行改善及更正錯別字，未改動內文：</p>
+<ul>
+<li>Facebook 未來群像：https://www.facebook.com/FutureImages.TW/posts/pfbid02N2yA2WpV2NZooijQYB8KWYoZAjqCUMnaEAtFrSMQhZUq63gQidbpf7oCPpjrWFqrl</li>
+<li>巴哈姆特：https://home.gamer.com.tw/artwork.php?sn=6271008</li>
+</ul>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E5%88%9D%E9%9F%B3%E6%9C%AA%E4%BE%86/">初音未來</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/project-diva/">Project DIVA</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E5%90%8D%E4%BC%B6%E8%A8%88%E7%95%AB/">名伶計畫</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%94%B0%E9%87%8E%E8%AA%BF%E6%9F%A5/">田野調查</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E4%BD%9C%E5%93%81%E9%9B%86/">作品集</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E6%8A%80%E8%A1%93%E6%80%A7%E7%A0%94%E7%A9%B6/">技術性研究</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E7%B5%B1%E8%A8%88%E5%AD%B8%E6%87%89%E7%94%A8/">統計學應用</a></li>
+      <li><a href="http://localhost:1313/CctMikuBlog.github.io/tags/%E8%87%BA%E7%81%A3/">臺灣</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/CctMikuBlog.github.io/">CCT的咪苦筆記</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
