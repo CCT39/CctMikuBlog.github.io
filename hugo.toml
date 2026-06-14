@@ -1,0 +1,101 @@
+baseURL = 'https://cct39.github.io/CctMikuBlog.github.io/'
+locale = 'zh-tw'
+title = 'CCT的咪苦筆記'
+theme = "PaperMod"
+enableGitInfo = true
+googleAnalytics = "G-KEPTVXG0L7" # CctMikuBlog
+
+hasCJKLanguage = true
+summaryLength = 40
+
+defaultContentLanguage = "zh-tw"
+defaultContentLanguageInSubdir = false
+
+[params]
+    math = true
+    author = "CCT"
+    defaultTheme = "auto"
+    displayRSSButton = true 
+    ShowThemeBadge = false
+    themeColor = "#39c5bb"
+    # 在網頁 Footer 顯示創用 CC 版權宣告
+    copyright = "本站圖文內容除另有標示外，均採用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh_TW) 授權條款。"
+
+# === 打賞與聯盟行銷設定（待啟用）===
+# [params.support]
+#     # 綠界科技打賞連結
+#     ecpayDonateUrl = "https://p.ecpay.com.tw/XXXXXX"  # 請替換為實際綠界打賞連結
+#     ecpayEnabled = false  # 設為 true 以啟用
+#     
+#     # 博客來 AP 聯盟行銷
+#     booksAffiliate = true  # 設為 true 在文章中啟用書籍推薦連結
+#     booksAffiliateId = "ap_XXXXXX"  # 請替換為實際博客來 AP ID
+#     
+#     # 是否在所有文章底部顯示打賞按鈕
+#     showDonateButton = false  # 設為 true 以啟用
+
+[params.homeInfoParams]
+    Title = "這裡是CCT"
+    Content = """
+CCT的文章存放庫，文章大多是圍繞著初音未來的硬核考察。
+"""
+
+[[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/cct39"
+
+# [[params.socialIcons]]
+#     name = "email"
+#     url = "mailto:your-email@example.com"
+
+ShowLastMod = true
+ShowToc = true
+TocOpen = false
+ShowBreadCrumbs = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+
+[[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+
+[[menu.main]]
+    identifier = "tags"
+    name = "標籤"
+    url = "/tags/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "categories"
+    name = "分類"
+    url = "/categories/"
+    weight = 30
+
+# [[menu.main]]
+#     identifier = "support"
+#     name = "贊助支持"
+#     url = "/support/"
+#     weight = 40
+
+[[menu.main]]
+    identifier = "about"
+    name = "關於我"
+    url = "/about/"
+    weight = 50
+
+[[menu.footer]]
+    identifier = "privacy"
+    name = "隱私權政策"
+    url = "/privacy/"
+    weight = 20
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\[', '\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
