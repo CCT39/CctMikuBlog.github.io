@@ -11,7 +11,7 @@
 《初音未來 Project DIVA MEGA39&rsquo;s&#43;》最近在Steam發售，對身為待在DIVA坑內9年多的筆者來說，這是個令人興奮的消息。今天想來討論一下，DIVA系列之中有一首名曲，它的由來特別容易被誤會，就是「1925年到底發生了什麼事，而成為這首歌曲名的由來？」對於這個問題，我個人在釐清之後，稍微用FB、Twitter、Google等多個平臺或引擎搜尋，誤解其由來的人大有人在，其中中文的部份幾乎沒有人說對；而基於個人所見，也尚未見到有文章試圖辯證這些說法的真偽。對於一首13年前投稿，高達400萬再生的名曲，其由來的說法分歧已久，卻似乎沒人出來舉證質疑誰對誰錯？這好像有點奇怪。當然這只是小小的誤會，不過這也確實引爆了我大大的好奇心，決定一探究竟。">
 <meta name="author" content="CCT">
 <link rel="canonical" href="http://localhost:1313/CctMikuBlog.github.io/posts/1925-not-first-female-conductor/">
-<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.97c6e0ba4d85f2387267100e1818532796a0411da86af9d112a6af11b7218506.css" integrity="sha256-l8bguk2F8jhyZxAOGBhTJ5agQR2oavnREqavEbchhQY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.b09c450e8d5324d056f147802b2ab0c9591aac88483ea71ddc8343b81a6a78f3.css" integrity="sha256-sJxFDo1TJNBW8UeAKyqwyVkarIhIPqcd3INDuBpqePM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/CctMikuBlog.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/CctMikuBlog.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/CctMikuBlog.github.io/favicon-32x32.png">
@@ -66,6 +66,51 @@
     }
 
 </script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous">
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$',  right: '$$',  display: true},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '$',   right: '$',   display: false},
+                {left: '\\(', right: '\\)', display: false}
+            ],
+            throwOnError: false
+        });"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    
+    const getTheme = () => {
+        const htmlTheme = document.documentElement.dataset.theme;
+        return (htmlTheme === 'dark') ? 'dark' : 'default';
+    };
+
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: getTheme(),
+        securityLevel: 'loose'
+    });
+
+    
+    document.querySelectorAll('pre > code.language-mermaid').forEach(async (codeEl) => {
+        const pre = codeEl.parentElement;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeEl.textContent;
+        pre.replaceWith(div);
+    });
+
+    await mermaid.run();
+</script>
+
 </head>
 <body id="top">
     <header class="header">

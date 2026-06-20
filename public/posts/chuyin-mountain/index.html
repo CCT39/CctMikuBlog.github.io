@@ -11,7 +11,7 @@
 （2019年）四天前的01月24日，我特地前往花蓮，爬上很久以前就想爬的「初音山」。山名雖然並不與初音未來相關（初音山這個名字取的早得多），但是單純因為山名就成為了我前往登山的原動力。">
 <meta name="author" content="CCT">
 <link rel="canonical" href="http://localhost:1313/CctMikuBlog.github.io/posts/chuyin-mountain/">
-<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.97c6e0ba4d85f2387267100e1818532796a0411da86af9d112a6af11b7218506.css" integrity="sha256-l8bguk2F8jhyZxAOGBhTJ5agQR2oavnREqavEbchhQY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.b09c450e8d5324d056f147802b2ab0c9591aac88483ea71ddc8343b81a6a78f3.css" integrity="sha256-sJxFDo1TJNBW8UeAKyqwyVkarIhIPqcd3INDuBpqePM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/CctMikuBlog.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/CctMikuBlog.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/CctMikuBlog.github.io/favicon-32x32.png">
@@ -66,6 +66,51 @@
     }
 
 </script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous">
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$',  right: '$$',  display: true},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '$',   right: '$',   display: false},
+                {left: '\\(', right: '\\)', display: false}
+            ],
+            throwOnError: false
+        });"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    
+    const getTheme = () => {
+        const htmlTheme = document.documentElement.dataset.theme;
+        return (htmlTheme === 'dark') ? 'dark' : 'default';
+    };
+
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: getTheme(),
+        securityLevel: 'loose'
+    });
+
+    
+    document.querySelectorAll('pre > code.language-mermaid').forEach(async (codeEl) => {
+        const pre = codeEl.parentElement;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeEl.textContent;
+        pre.replaceWith(div);
+    });
+
+    await mermaid.run();
+</script>
+
 </head>
 <body id="top">
     <header class="header">

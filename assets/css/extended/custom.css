@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'LXGW WenKai TC';
+    src: url('../../fonts/lxgw-wenkai-tc.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'LXGW WenKai TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+:root {
+    --theme: #fffeec;
+    --entry: #c3e5e7;
+    --primary: #39c5bb;
+    --secondary: #137a7f;
+    --tertiary: #86cecb;
+    --content: #373b3e;
+    --border: #86cecb;
+}
+
+/*     --code-bg: #bec8d1; */
+
+.dark {
+    --theme: #373b3e;
+    --entry: #2e2e33;
+    --primary: #39c5bb;
+    --secondary: #86cecb;
+    --tertiary: #c3e5e7;
+    --content: #fffeec;
+    --code-bg: #1d1e20;
+    --border: #137a7f;
+}
+
+/* 可選：為連結或按鈕等元素添加粉紅色強調（#e12885） */
+
+a:hover,
+.post-entry:hover .entry-header h2 {
+    color: #e12885 !important;
+}
+
+.dark a:hover,
+.dark .post-entry:hover .entry-header h2 {
+    color: #e12885 !important;
+}
+
+/* 改善標籤與分類按鈕在淺色主題下的對比度 */
+.post-tags a,
+.terms-tags a {
+    background: var(--entry) !important;
+}
+
+.dark .post-tags a,
+.dark .terms-tags a {
+    background: var(--tertiary) !important;
+}

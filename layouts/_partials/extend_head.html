@@ -1,0 +1,63 @@
+{{- /* =====================================================
+     extend_head.html — 自訂 <head> 注入區
+     PaperMod 會在 head.html 結尾呼叫此 partial，
+     可於此處安全新增第三方 library，不影響主題更新。
+     ===================================================== */ -}}
+
+{{- /* ── KaTeX：LaTeX 數學公式渲染 ──────────────────────
+     當文章 front matter 有 math: true 或全站 params.math = true 時載入。
+     使用 auto-render extension 自動掃描頁面內的 $...$ 與 $$...$$ 分隔符。
+     ──────────────────────────────────────────────────── */ -}}
+{{- if or .Params.math site.Params.math }}
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous">
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$',  right: '$$',  display: true},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '$',   right: '$',   display: false},
+                {left: '\\(', right: '\\)', display: false}
+            ],
+            throwOnError: false
+        });"></script>
+{{- end }}
+
+{{- /* ── Mermaid：流程圖 / 序列圖 / 甘特圖 等 ──────────
+     當文章 front matter 有 mermaid: true 或全站 params.mermaid = true 時載入。
+     腳本載入後，自動將 <pre><code class="language-mermaid"> 轉換成 SVG 圖表。
+     ──────────────────────────────────────────────────── */ -}}
+{{- if or .Params.mermaid site.Params.mermaid }}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    // 讀取目前主題（light / dark），對應 Mermaid 的色彩方案
+    const getTheme = () => {
+        const htmlTheme = document.documentElement.dataset.theme;
+        return (htmlTheme === 'dark') ? 'dark' : 'default';
+    };
+
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: getTheme(),
+        securityLevel: 'loose'
+    });
+
+    // 將 Hugo 產生的 <code class="language-mermaid"> 轉換成 mermaid 可識別的格式
+    document.querySelectorAll('pre > code.language-mermaid').forEach(async (codeEl) => {
+        const pre = codeEl.parentElement;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeEl.textContent;
+        pre.replaceWith(div);
+    });
+
+    await mermaid.run();
+</script>
+{{- end }}

@@ -10,7 +10,7 @@
 <meta name="description" content="《劇場版世界計畫　崩壞的世界與無法歌唱的初音未來》的4DX・MX4D版本，於（2025年）06月06日在臺灣上映，臺灣現存營業中的所有4DX影廳共4座，以及MX4D影廳共1座都有上映（可惜新竹4DX和臺中MX4D一個拆了一個炸了，沒辦法上映……）。在數位場幾乎都下檔的現在，4DX・MX4D的上映讓人（尤其是南部朋友）終於又有地方可以看這部電影了；而原先緩慢增加的票房也因為這一波上映，彷彿注入了強心針：初音未來電影暫時重回週末票房前10名，週末票房久違地再次突破100萬！在週末過後，票房累計已達2,700餘萬元、觀影人次也超過99,000人次。當然這跟商業大片來比也許不值一提，但就粉絲向小片來說應該算不錯吧。">
 <meta name="author" content="CCT">
 <link rel="canonical" href="http://localhost:1313/CctMikuBlog.github.io/posts/project-sekai-movie-4d-box-office-analysis/">
-<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.97c6e0ba4d85f2387267100e1818532796a0411da86af9d112a6af11b7218506.css" integrity="sha256-l8bguk2F8jhyZxAOGBhTJ5agQR2oavnREqavEbchhQY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/CctMikuBlog.github.io/assets/css/stylesheet.b09c450e8d5324d056f147802b2ab0c9591aac88483ea71ddc8343b81a6a78f3.css" integrity="sha256-sJxFDo1TJNBW8UeAKyqwyVkarIhIPqcd3INDuBpqePM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/CctMikuBlog.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/CctMikuBlog.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/CctMikuBlog.github.io/favicon-32x32.png">
@@ -65,6 +65,51 @@
     }
 
 </script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous">
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$',  right: '$$',  display: true},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '$',   right: '$',   display: false},
+                {left: '\\(', right: '\\)', display: false}
+            ],
+            throwOnError: false
+        });"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    
+    const getTheme = () => {
+        const htmlTheme = document.documentElement.dataset.theme;
+        return (htmlTheme === 'dark') ? 'dark' : 'default';
+    };
+
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: getTheme(),
+        securityLevel: 'loose'
+    });
+
+    
+    document.querySelectorAll('pre > code.language-mermaid').forEach(async (codeEl) => {
+        const pre = codeEl.parentElement;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeEl.textContent;
+        pre.replaceWith(div);
+    });
+
+    await mermaid.run();
+</script>
+
 </head>
 <body id="top">
     <header class="header">

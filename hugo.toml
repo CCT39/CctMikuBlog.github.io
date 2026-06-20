@@ -13,6 +13,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
     math = true
+    mermaid = true
     author = "CCT"
     defaultTheme = "auto"
     displayRSSButton = true 
