@@ -1,0 +1,2 @@
+# 在部落格根目錄執行，加上 PYTHONUTF8=1 確保中文正常輸出
+$env:PYTHONUTF8=1; python md2fb.py "content\posts\你的文章資料夾\index.md"

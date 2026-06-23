@@ -6,8 +6,17 @@
     <description>Recent content in 初音未來 on CCT的咪苦筆記</description>
     <generator>Hugo</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 14 Jun 2026 23:25:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/CctMikuBlog.github.io/tags/%E5%88%9D%E9%9F%B3%E6%9C%AA%E4%BE%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我發表論文了！分析DIVA AC音遊計分規則的複雜性</title>
+      <link>http://localhost:1313/CctMikuBlog.github.io/posts/diva-arcade-complexity-research/</link>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CctMikuBlog.github.io/posts/diva-arcade-complexity-research/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+&lt;p&gt;大家好，這裡是CCT。&lt;/p&gt;
+&lt;p&gt;在年初的時候，我完成了一篇學術論文，是針對音樂遊戲街機「初音未來Project DIVA Arcade」（下稱&lt;strong&gt;DIVA AC&lt;/strong&gt;或&lt;strong&gt;DIVA&lt;/strong&gt;）的，計算複雜性理論（computational complexity theory）的研究；我投稿到日本的情報處理學會（Information Processing Society of Japan，IPSJ）的，具備同行評審制度的學術期刊《Journal of Information Processing》（JIP）當中的《エンタテインメントコンピューティング》（Entertainment Computing，娛樂計算）特集，該特集旨在收錄許多與娛樂、遊戲的計算、設計相關（包含但不限於電子遊戲）的原創學術研究。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>影片翻譯：「PDA判定解説　判定の仕組みと台判別　【Project DIVA Arcade】」</title>
       <link>http://localhost:1313/CctMikuBlog.github.io/posts/diva-explaination-translation/</link>
